@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ITAlumni | Red profesional de exalumnos del sector digital</title>
+    <meta
+      name="description"
+      content="Conecta con exalumnos de tecnología, explora perfiles profesionales, busca oportunidades laborales y participa en actividades de la comunidad." />
+    <!-- T0D0: Añadir etiquetas Open Graph y Twitter Cards si procede -->
+    <!-- T0D0: Actualizar URL canónica a Netlify/Vercel/GitHub Pages al desplegar -->
+    <link rel="canonical" href="https://tu-proyecto-italumni.netlify.app/" />
+
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#DF007F" />
+
+    <link
+      rel="icon"
+      href="./src/assets/icons/favicon-color.svg"
+      type="image/svg+xml" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;1,400&family=Poppins:wght@500;600;700&display=swap"
+      rel="stylesheet" />
+
+    <!-- Hojas de estilo en orden de cascada (Mobile First) -->
+    <link rel="stylesheet" href="./src/styles/tokens.css" />
+    <link rel="stylesheet" href="./src/styles/base.css" />
+    <link rel="stylesheet" href="./src/styles/layout.css" />
+    <link rel="stylesheet" href="./src/styles/components.css" />
+  </head>
+
+  <body class="home-page">
+    <!-- criterios de accessibilidad WCAG 2.2 navegación teclado -->
+    <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+
+    <header class="site-header">
+      <a
+        class="site-header__brand"
+        href="./index.html"
+        aria-label="IT Alumni - Inicio">
+        <img
+          class="site-header__logo-mark"
+          src="./src/assets/icons/x-logo-icon-color.svg"
+          alt=""
+          aria-hidden="true"
+          width="24"
+          height="24" />
+        <img
+          class="site-header__logo-text"
+          src="./src/assets/icons/logo-icon-color.svg"
+          alt=""
+          aria-hidden="true"
+          width="112"
+          height="24" />
+      </a>
+
+      <nav class="site-nav" aria-label="Navegación principal">
+        <ul class="site-nav__list">
+          <li class="site-nav__item">
+            <a
+              class="site-nav__link site-nav__link--active"
+              href="./index.html"
+              aria-current="page">
+              Inicio
+            </a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="./pages/networking.html">Comunidad</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="./pages/jobs.html">Ofertas de empleo</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="./pages/events.html">Eventos</a>
+          </li>
+        </ul>
+
+        <div class="site-header__actions">
+          <a class="btn btn--outline" href="./pages/signup.html">
+            <img
+              class="btn__icon"
+              src="./src/assets/icons/openmailcode-icon-color.svg"
+              alt=""
+              aria-hidden="true"
+              width="24"
+              height="24" />
+            <span class="btn__label">Apúntate</span>
+          </a>
+
+          <a class="btn btn--primary" href="./pages/login.html">
+            <img
+              class="btn__icon"
+              src="./src/assets/icons/user-icon-color.svg"
+              alt=""
+              aria-hidden="true"
+              width="24"
+              height="24" />
+            <span class="btn__label">¿Inicia sesión</span>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main-content" class="site-main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__content">
+          <!-- LOGO MÓVIL (Agrupado) -->
+          <div class="hero__mobile-brand" role="img" aria-label="IT Alumni">
+            <img
+              class="hero__mobile-logo-mark"
+              src="./src/assets/icons/x-logo-icon-color.svg"
+              alt=""
+              aria-hidden="true" />
+            <img
+              class="hero__mobile-logo-text"
+              src="./src/assets/icons/logo-icon-color.svg"
+              alt=""
+              aria-hidden="true" />
+          </div>
+
+          <h1 id="hero-title" class="hero__title">Bienvenidos, Alumni.</h1>
+          <p class="hero__subtitle">
+            Conectando y empoderando a nuestra comunidad global de graduados.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary hero__cta" href="./pages/signup.html"
+              >Únete</a
+            >
+            <a class="btn btn--outline hero__cta" href="./pages/networking.html">
+              Mira qué hacemos
+            </a>
+          </div>
+        </div>
+
+        <figure class="hero__media">
+          <img
+            class="hero__image"
+            src="./src/img/01_img_heroSectionLaptop.webp"
+            alt="Grupo de personas participando en un encuentro en una sala luminosa"
+            width="800"
+            height="450"
+            loading="lazy"
+            decoding="async" />
+          <figcaption class="hero__caption">
+            Encuentros y aprendizaje compartido dentro de la comunidad.
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- BENEFITS -->
+      <section class="benefits" aria-labelledby="benefits-title">
+        <h2 id="benefits-title" class="benefits__title">
+          ¿Qué beneficios obtienes al unirte?
+        </h2>
+
+        <div class="benefits__list">
+          <article class="benefit-card">
+            <h3 class="visually-hidden">Beneficio: Compartir y conectar</h3>
+            <img
+              class="benefit-card__icon"
+              src="./src/assets/icons/education-icon-color.svg"
+              alt=""
+              aria-hidden="true"
+              width="32"
+              height="32" />
+            <p class="benefit-card__text">
+              <strong>Comparte y no pierdas el contacto:</strong> Sube tus momentos
+              importantes, cuenta cómo va todo y queda con los compañeros. Una red
+              para estar más cerca.
+            </p>
+            <a class="btn btn--primary benefit-card__btn" href="./pages/signup.html"
+              >Apúntate ya</a
+            >
+          </article>
+
+          <article class="benefit-card">
+            <h3 class="visually-hidden">Beneficio: Compartir</h3>
+            <img
+              class="benefit-card__icon"
+              src="./src/assets/icons/messages-icon-color.svg"
+              alt=""
+              aria-hidden="true"
+              width="32"
+              height="32" />
+            <p class="benefit-card__text">
+              <strong>Participa en debates:</strong> Intercambia conocimientos,
+              puntos de vista y opiniones sobre temas que te interesan.
+            </p>
+            <a class="btn btn--soft benefit-card__btn" href="./pages/signup.html"
+              >Apúntate ya</a
+            >
+          </article>
+
+          <article class="benefit-card">
+            <h3 class="visually-hidden">Beneficio: Compartir</h3>
+            <img
+              class="benefit-card__icon"
+              src="./src/assets/icons/adduser-icon-color.svg"
+              alt=""
+              aria-hidden="true"
+              width="32"
+              height="32" />
+            <p class="benefit-card__text">
+              <strong>Red Alumni:</strong> Conecta con compañeros de promoción, haz
+              nuevas amistades y crea recuerdos que duren toda la vida.
+            </p>
+            <a class="btn btn--soft benefit-card__btn" href="./pages/signup.html"
+              >Apúntate ya</a
+            >
+          </article>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS CARDS -->
+      <section class="testimonials" aria-labelledby="testimonials-title">
+        <h2 id="testimonials-title" class="testimonials__title">
+          ¡Te enseñamos lo que opinan nuestros superusuarios!
+        </h2>
+        <div class="testimonials__list">
+          <figure class="testimonial-card">
+            <div class="testimonial-card__header">
+              <img
+                class="testimonial-card__avatar"
+                src="./src/img/01_imgOpinionCardSection.webp"
+                alt="Retrato de Mikel, participante de la comunidad"
+                width="64"
+                height="64"
+                loading="lazy"
+                decoding="async" />
+
+              <div class="testimonial-card__info">
+                <cite class="testimonial-card__author">Mikel</cite>
+
+                <div
+                  class="testimonial-card__rating"
+                  role="img"
+                  aria-label="Valoración: 5 de 5 estrellas">
+                  <img
+                    class="testimonial-card__star"
+                    src="./src/assets/icons/starfilled-icon-color.svg"
+                    alt=""
+                    aria-hidden="true"
+                    width="16"
+                    height="16" />
+                  <img
+                    class="testimonial-card__star"
+                    src="./src/assets/icons/starfilled-icon-color.svg"
+                    alt=""
+                    aria-hidden="true"
+                    width="16"
+                    height="16" />
+                  <img
+                    class="testimonial-card__star"
+                    src="./src/assets/icons/starfilled-icon-color.svg"
+                    alt=""
+                    aria-hidden="true"
+                    width="16"
+                    height="16" />
+                  <img
+                    class="testimonial-card__star"
+                    src="./src/assets/icons/starfilled-icon-color.svg"
+                    alt=""
+                    aria-hidden="true"
+                    width="16"
+                    height="16" />
+                  <img
+                    class="testimonial-card__star"
+                    src="./src/assets/icons/starfilled-icon-color.svg"
+                    alt=""
+                    aria-hidden="true"
+                    width="16"
+                    height="16" />
+                </div>
+              </div>
+            </div>
+
+            <blockquote class="testimonial-card__quote">
+              <p>
+                Gracias a IT Alumni conseguí el trabajo de mis sueños en el mundo
+                tech con su increíble programa de mentoría.
+              </p>
+            </blockquote>
+          </figure>
+
+          <figure class="testimonial-card">
+            <div class="testimonial-card__header">
+              <img
+                class="testimonial-card__avatar"
+                src="./src/img/02_imgOpinionCardSection.webp"
+                alt="Retrato de Emma, participante de la comunidad"
+                width="64"
+                height="64"
+                loading="lazy"
+                decoding="async" />
+
+              <div class="testimonial-card__info">
+                <cite class="testimonial-card__author">Emma</cite>
+
+                <div
+                  class="testimonial-card__rating"
+                  role="img"
+                  aria-label="Valoración: 5 de 5 estrellas">
+                  <img
+                    class="testimonial-card__star"
+                    src="./src/assets/icons/starfilled-icon-color.svg"
+                    alt=""
+                    aria-hidden="true"
+                    width="16"
+                    height="16" />
+                  <img
+                    class="testimonial-card__star"
+                    src="./src/assets/icons/starfilled-icon-color.svg"
+                    alt=""
+                    aria-hidden="true"
+                    width="16"
+                    height="16" />
+                  <img
+                    class="testimonial-card__star"
+                    src="./src/assets/icons/starfilled-icon-color.svg"
+                    alt=""
+                    aria-hidden="true"
+                    width="16"
+                    height="16" />
+                  <img
+                    class="testimonial-card__star"
+                    src="./src/assets/icons/starfilled-icon-color.svg"
+                    alt=""
+                    aria-hidden="true"
+                    width="16"
+                    height="16" />
+                  <img
+                    class="testimonial-card__star"
+                    src="./src/assets/icons/starfilled-icon-color.svg"
+                    alt=""
+                    aria-hidden="true"
+                    width="16"
+                    height="16" />
+                </div>
+              </div>
+            </div>
+
+            <blockquote class="testimonial-card__quote">
+              <p>
+                Gracias a IT Alumni conseguí el trabajo de mis sueños en el mundo
+                tech con su increíble programa de mentoría.
+              </p>
+            </blockquote>
+          </figure>
+
+          <figure class="testimonial-card">
+            <div class="testimonial-card__header">
+              <img
+                class="testimonial-card__avatar"
+                src="https://i.pravatar.cc/150?img=49"
+                alt="Retrato de Laia, participante de la comunidad"
+                width="64"
+                height="64"
+                loading="lazy"
+                decoding="async" />
+
+              <div class="testimonial-card__info">
+                <cite class="testimonial-card__author">Laia</cite>
+
+                <div
+                  class="testimonial-card__rating"
+                  role="img"
+                  aria-label="Valoración: 5 de 5 estrellas">
+                  <img
+                    class="testimonial-card__star"
+                    src="./src/assets/icons/starfilled-icon-color.svg"
+                    alt=""
+                    aria-hidden="true"
+                    width="16"
+                    height="16" />
+                  <img
+                    class="testimonial-card__star"
+                    src="./src/assets/icons/starfilled-icon-color.svg"
+                    alt=""
+                    aria-hidden="true"
+                    width="16"
+                    height="16" />
+                  <img
+                    class="testimonial-card__star"
+                    src="./src/assets/icons/starfilled-icon-color.svg"
+                    alt=""
+                    aria-hidden="true"
+                    width="16"
+                    height="16" />
+                  <img
+                    class="testimonial-card__star"
+                    src="./src/assets/icons/starfilled-icon-color.svg"
+                    alt=""
+                    aria-hidden="true"
+                    width="16"
+                    height="16" />
+                  <img
+                    class="testimonial-card__star"
+                    src="./src/assets/icons/starfilled-icon-color.svg"
+                    alt=""
+                    aria-hidden="true"
+                    width="16"
+                    height="16" />
+                </div>
+              </div>
+            </div>
+
+            <blockquote class="testimonial-card__quote">
+              <p>
+                Gracias a IT Alumni conseguí el trabajo de mis sueños en el mundo
+                tech con su increíble programa de mentoría.
+              </p>
+            </blockquote>
+          </figure>
+        </div>
+
+        <div
+          class="testimonials__controls"
+          role="group"
+          aria-label="Controles de testimonios">
+          <button
+            class="testimonials__btn testimonials__btn--prev"
+            type="button"
+            aria-label="Testimonio anterior">
+            <span aria-hidden="true">&lt;</span>
+          </button>
+          <button
+            class="testimonials__btn testimonials__btn--next"
+            type="button"
+            aria-label="Testimonio siguiente">
+            <span aria-hidden="true">&gt;</span>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <section class="site-footer__newsletter" aria-labelledby="newsletter-title">
+        <h2 id="newsletter-title" class="site-footer__heading">
+          ¡No te pierdas nada, suscríbete!
+        </h2>
+
+        <form
+          class="newsletter-form"
+          action="#"
+          method="post"
+          aria-label="Suscripción por correo electrónico">
+          <div class="newsletter-form__field">
+            <label
+              class="newsletter-form__label visually-hidden"
+              for="newsletter-email">
+              Correo electrónico
+            </label>
+            <img
+              class="newsletter-form__icon"
+              src="./src/assets/icons/email-icon-color.svg"
+              alt=""
+              aria-hidden="true"
+              width="16"
+              height="16" />
+            <input
+              id="newsletter-email"
+              class="newsletter-form__input"
+              name="email"
+              type="email"
+              autocomplete="email"
+              placeholder="tu email"
+              required />
+          </div>
+          <button class="btn btn--primary newsletter-form__submit" type="submit">
+            Suscríbete
+          </button>
+        </form>
+      </section>
+
+      <div class="site-footer__main">
+        <a
+          class="site-footer__brand"
+          href="./index.html"
+          aria-label="ITAlumni - Inicio">
+          <img
+            class="site-footer__logo-mark"
+            src="./src/assets/icons/x-logo-icon-color.svg"
+            alt=""
+            aria-hidden="true"
+            width="24"
+            height="24" />
+          <img
+            class="site-footer__logo-text"
+            src="./src/assets/icons/logo-icon-color-v2.svg"
+            alt=""
+            aria-hidden="true"
+            width="112"
+            height="24" />
+        </a>
+
+        <nav class="footer-nav" aria-label="Navegación del pie de página">
+          <ul class="footer-nav__list">
+            <li class="footer-nav__item">
+              <a class="footer-nav__link" href="./index.html">Sobre nosotros</a>
+            </li>
+            <li class="footer-nav__item">
+              <a class="footer-nav__link" href="./pages/networking.html">
+                Funcionalidades
+              </a>
+            </li>
+            <li class="footer-nav__item">
+              <a class="footer-nav__link" href="./pages/contact.html">Contáctanos</a>
+            </li>
+            <li class="footer-nav__item">
+              <a class="footer-nav__link" href="./pages/faqs.html">FAQs</a>
+            </li>
+            <li class="footer-nav__item">
+              <a class="footer-nav__link" href="./pages/jobs.html">
+                Oportunidades laborales
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="site-footer__bottom">
+        <div class="site-footer__field">
+          <label for="language-type" class="site-footer__label visually-hidden">
+            Seleccionar idioma de la interfaz
+          </label>
+          <select
+            id="language-type"
+            name="language_type"
+            class="site-footer__select">
+            <option value="es">Español</option>
+            <option value="cat">Catalán</option>
+            <option value="eng">Inglés</option>
+          </select>
+        </div>
+
+        <p class="site-footer__copy">
+          © <span data-current-year>2026</span> ITAlumni
+          <span aria-hidden="true">•</span>
+          <a href="./pages/legal-privacy.html">Privacidad</a>
+          <span aria-hidden="true">•</span>
+          <a href="./pages/legal-terms.html">Términos de uso</a>
+          <span aria-hidden="true">•</span>
+          <a href="./pages/sitemap.html">Mapa del sitio</a>
+        </p>
+
+        <ul class="social-links" aria-label="Redes sociales">
+          <li class="social-links__item">
+            <a class="social-links__link" href="#linkedin" aria-label="LinkedIn">
+              <img
+                class="social-links__icon"
+                src="./src/assets/icons/linkedin-logo-color.svg"
+                alt=""
+                aria-hidden="true"
+                width="24"
+                height="24" />
+            </a>
+          </li>
+          <li class="social-links__item">
+            <a class="social-links__link" href="#youtube" aria-label="YouTube">
+              <img
+                class="social-links__icon"
+                src="./src/assets/icons/youtube-logo-color.svg"
+                alt=""
+                aria-hidden="true"
+                width="24"
+                height="24" />
+            </a>
+          </li>
+          <li class="social-links__item">
+            <a class="social-links__link" href="#facebook" aria-label="Facebook">
+              <img
+                class="social-links__icon"
+                src="./src/assets/icons/facebook-logo-color.svg"
+                alt=""
+                aria-hidden="true"
+                width="24"
+                height="24" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

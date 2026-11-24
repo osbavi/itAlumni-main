@@ -1,0 +1,20 @@
+<svg width="112" height="24" viewBox="0 0 112 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- L -->
+  <path d="M2 4H5.5V17H11V20H2V4Z" fill="#ffffff" />
+  <path d="M13 17H22V20H13V17Z" fill="#ffffff" />
+  
+  <!-- U -->
+  <path d="M26 4H29.5V17H34.5V20H26V4Z" fill="#ffffff" />
+  <path d="M36.5 17H41.5V4H45V20H36.5V17Z" fill="#ffffff" />
+  
+  <!-- M -->
+  <path d="M50 4H53.5L60 10.5V15L53.5 8.5V20H50V4Z" fill="#ffffff" />
+  <path d="M62 8.5L68.5 4H72V20H68.5V8.5L62 13V8.5Z" fill="#ffffff" />
+  
+  <!-- N -->
+  <path d="M77 4H80.5L88.5 12V16.5L80.5 8.5V20H77V4Z" fill="#ffffff" />
+  <path d="M90.5 12L94.5 16V4H98V20H94.5L90.5 16V12Z" fill="#ffffff" />
+  
+  <!-- I -->
+  <path d="M103 4H106.5V20H103V4Z" fill="#ffffff" />
+</svg>

@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crea tu cuenta | ITAlumni</title>
+    <meta
+      name="description"
+      content="Únete a la comunidad de exalumnos de IT Academy y conecta con profesionales del sector digital." />
+
+    <meta name="robots" content="noindex, follow" />
+    <meta name="theme-color" content="#DF007F" />
+
+    <link
+      rel="icon"
+      href="../src/assets/icons/favicon-color.svg"
+      type="image/svg+xml" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;1,400&family=Poppins:wght@500;600;700&display=swap"
+      rel="stylesheet" />
+
+    <!-- Hojas de estilo en orden de cascada (Mobile First) -->
+    <link rel="stylesheet" href="../src/styles/tokens.css" />
+    <link rel="stylesheet" href="../src/styles/base.css" />
+    <link rel="stylesheet" href="../src/styles/layout.css" />
+    <link rel="stylesheet" href="../src/styles/components.css" />
+  </head>
+
+  <body class="signup-page">
+    <!-- criterios de accessibilidad WCAG 2.2 navegación teclado -->
+    <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+
+    <main id="main-content" class="signup-page__main">
+      <section class="signup" aria-labelledby="signup-title">
+        <!-- IMAGEN LATERAL (solo desktop) -->
+        <figure class="signup__media">
+          <img
+            class="signup__media-image"
+            src="../src/img/02_img_signupSectionLaptop.webp"
+            alt=""
+            aria-hidden="true"
+            width="800"
+            height="1200" />
+          <figcaption class="visually-hidden">
+            Comunidad de exalumnos de IT Academy
+          </figcaption>
+        </figure>
+
+        <!-- PANEL FORMULARIO -->
+        <div class="signup__panel">
+          <header class="signup__header">
+            <h1 id="signup-title" class="signup__title">Crea tu cuenta</h1>
+            <p class="signup__subtitle">
+              Únete a nosotros para conectar y compartir oportunidades.
+            </p>
+          </header>
+
+          <form
+            class="signup-form"
+            id="signup-form"
+            action="./home.html"
+            method="post"
+            novalidate>
+            <!-- Campo: Nombre -->
+            <div class="signup-form__field">
+              <label for="signup-name" class="signup-form__label visually-hidden">
+                Nombre
+              </label>
+              <div class="signup-form__input-wrapper">
+                <img
+                  class="signup-form__icon"
+                  src="../src/assets/icons/user-icon.svg"
+                  alt=""
+                  aria-hidden="true"
+                  width="20"
+                  height="20" />
+                <input
+                  id="signup-name"
+                  class="signup-form__input"
+                  type="text"
+                  name="name"
+                  placeholder="Pon tu nombre"
+                  autocomplete="given-name"
+                  minlength="2"
+                  required
+                  aria-describedby="signup-name-error" />
+              </div>
+              <p
+                id="signup-name-error"
+                class="signup-form__error"
+                role="alert"
+                hidden></p>
+            </div>
+
+            <!-- Campo: Apellido -->
+            <div class="signup-form__field">
+              <label for="signup-surname" class="signup-form__label visually-hidden">
+                Apellido
+              </label>
+              <div class="signup-form__input-wrapper">
+                <img
+                  class="signup-form__icon"
+                  src="../src/assets/icons/user-icon.svg"
+                  alt=""
+                  aria-hidden="true"
+                  width="20"
+                  height="20" />
+                <input
+                  id="signup-surname"
+                  class="signup-form__input"
+                  type="text"
+                  name="surname"
+                  placeholder="Pon tu apellido"
+                  autocomplete="family-name"
+                  minlength="2"
+                  required
+                  aria-describedby="signup-surname-error" />
+              </div>
+              <p
+                id="signup-surname-error"
+                class="signup-form__error"
+                role="alert"
+                hidden></p>
+            </div>
+
+            <!-- Campo: Email -->
+            <div class="signup-form__field">
+              <label for="signup-email" class="signup-form__label visually-hidden">
+                Correo electrónico
+              </label>
+              <div class="signup-form__input-wrapper">
+                <img
+                  class="signup-form__icon"
+                  src="../src/assets/icons/email-icon.svg"
+                  alt=""
+                  aria-hidden="true"
+                  width="20"
+                  height="20" />
+                <input
+                  id="signup-email"
+                  class="signup-form__input"
+                  type="email"
+                  name="email"
+                  placeholder="Tu correo electrónico"
+                  autocomplete="email"
+                  required
+                  aria-describedby="signup-email-error" />
+              </div>
+              <p
+                id="signup-email-error"
+                class="signup-form__error"
+                role="alert"
+                hidden></p>
+            </div>
+
+            <!-- Campo: Contraseña -->
+            <div class="signup-form__field">
+              <label
+                for="signup-password"
+                class="signup-form__label visually-hidden">
+                Contraseña
+              </label>
+              <div class="signup-form__input-wrapper">
+                <img
+                  class="signup-form__icon"
+                  src="../src/assets/icons/password-icon.svg"
+                  alt=""
+                  aria-hidden="true"
+                  width="20"
+                  height="20" />
+                <input
+                  id="signup-password"
+                  class="signup-form__input"
+                  type="password"
+                  name="password"
+                  placeholder="Crea una contraseña"
+                  autocomplete="new-password"
+                  minlength="8"
+                  required
+                  aria-describedby="signup-password-hint signup-password-error" />
+              </div>
+              <p id="signup-password-hint" class="signup-form__hint">
+                Mínimo 8 caracteres.
+              </p>
+              <p
+                id="signup-password-error"
+                class="signup-form__error"
+                role="alert"
+                hidden></p>
+            </div>
+
+            <!-- Términos y condiciones -->
+            <div class="signup-form__terms">
+              <input
+                id="signup-terms"
+                class="signup-form__checkbox"
+                type="checkbox"
+                name="terms"
+                required
+                aria-describedby="signup-terms-error" />
+              <label for="signup-terms" class="signup-form__terms-label">
+                Acepto los
+                <a href="./legal-terms.html" class="signup-form__link"
+                  >Términos y Condiciones</a
+                >
+              </label>
+              <p
+                id="signup-terms-error"
+                class="signup-form__error"
+                role="alert"
+                hidden></p>
+            </div>
+
+            <!-- Botón principal -->
+            <button type="submit" class="btn btn--primary signup-form__submit">
+              Regístrate
+            </button>
+
+            <!-- Separador "o" -->
+            <div class="signup-form__divider">
+              <span class="signup-form__divider-text">o</span>
+            </div>
+
+            <!-- Botones sociales -->
+            <button
+              type="button"
+              class="signup-form__social signup-form__social--apple">
+              <img
+                class="signup-form__social-icon"
+                src="../src/assets/icons/apple-logo-color.svg"
+                alt=""
+                aria-hidden="true"
+                width="20"
+                height="20" />
+              <span>Continuar con Apple</span>
+            </button>
+
+            <button
+              type="button"
+              class="signup-form__social signup-form__social--google">
+              <img
+                class="signup-form__social-icon"
+                src="../src/assets/icons/google-logo-color.svg"
+                alt=""
+                aria-hidden="true"
+                width="20"
+                height="20" />
+              <span>Continuar con Google</span>
+            </button>
+
+            <button
+              type="button"
+              class="signup-form__social signup-form__social--facebook">
+              <img
+                class="signup-form__social-icon"
+                src="../src/assets/icons/facebook-logo-color.svg"
+                alt=""
+                aria-hidden="true"
+                width="20"
+                height="20" />
+              <span>Continuar con Facebook</span>
+            </button>
+
+            <!-- Link a login -->
+            <p class="signup-form__login-prompt">
+              ¿Ya te has registrado?
+              <a href="./login.html" class="signup-form__link">Inicia sesión</a>
+            </p>
+          </form>
+
+          <!-- Feedback global del formulario (para JS) -->
+          <div class="signup-form__feedback" role="status" aria-live="polite"></div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

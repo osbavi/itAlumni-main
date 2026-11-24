@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página principal | ITAlumni</title>
+    <meta
+      name="description"
+      content="Accede a tu cuenta de ITAlumni para conectar con la comunidad." />
+
+    <meta name="robots" content="noindex, follow" />
+    <meta name="theme-color" content="#DF007F" />
+
+    <link
+      rel="icon"
+      href="../src/assets/icons/favicon-color.svg"
+      type="image/svg+xml" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;1,400&family=Poppins:wght@500;600;700&display=swap"
+      rel="stylesheet" />
+
+    <!-- Hojas de estilo en orden de cascada (Mobile First) -->
+    <link rel="stylesheet" href="../src/styles/tokens.css" />
+    <link rel="stylesheet" href="../src/styles/base.css" />
+    <link rel="stylesheet" href="../src/styles/layout.css" />
+    <link rel="stylesheet" href="../src/styles/components.css" />
+  </head>
+
+  <body class="homelogged_page">
+    <!-- criterios de accessibilidad WCAG 2.2 navegación teclado -->
+    <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+
+    <!-- HEADER PARA USUARIOS LOGUEADOS -->
+    <header class="site-header site-header--authenticated">
+      <!-- Logo (Oculto en móvil, visible en escritorio) -->
+      <a
+        class="site-header__brand"
+        href="../index.html"
+        aria-label="IT Alumni - Inicio">
+        <img
+          class="site-header__logo-mark"
+          src="../src/assets/icons/x-logo-icon-color.svg"
+          alt=""
+          aria-hidden="true"
+          width="24"
+          height="24" />
+        <img
+          class="site-header__logo-text"
+          src="../src/assets/icons/logo-icon-color.svg"
+          alt=""
+          aria-hidden="true"
+          width="112"
+          height="24" />
+      </a>
+
+      <!-- Título para móvil (Oculto en escritorio) -->
+      <span class="site-header__title-mobile">Página de inicio</span>
+
+      <nav class="site-nav" aria-label="Navegación principal">
+        <ul class="site-nav__list">
+          <li class="site-nav__item">
+            <a
+              class="site-nav__link site-nav__link--active"
+              href="./home.html"
+              aria-current="page"
+              >Inicio
+            </a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="./networking.html">Comunidad</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="./jobs.html">Ofertas de empleo</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="./events.html">Eventos</a>
+          </li>
+        </ul>
+
+        <div class="site-header__user-actions">
+          <button
+            type="button"
+            class="site-header__icon-btn hide-on-mobile"
+            aria-label="Notificaciones">
+            <img
+              src="../src/assets/icons/bell-icon.svg"
+              alt=""
+              aria-hidden="true"
+              width="24"
+              height="24" />
+          </button>
+
+          <button
+            type="button"
+            class="site-header__icon-btn hide-on-mobile"
+            aria-label="Ajustes de cuenta">
+            <img
+              src="../src/assets/icons/settings-icon.svg"
+              alt=""
+              aria-hidden="true"
+              width="24"
+              height="24" />
+          </button>
+
+          <button
+            type="button"
+            class="site-header__icon-btn show-on-mobile"
+            aria-label="Estadísticas">
+            <img
+              src="../src/assets/icons/barchart-icon.svg"
+              alt=""
+              aria-hidden="true"
+              width="24"
+              height="24" />
+          </button>
+
+          <a
+            href="./home.html"
+            class="site-header__avatar-link"
+            aria-label="Mi panel de usuario">
+            <img
+              class="site-header__avatar"
+              src="../src/img/01_imgHomeSection.webp"
+              alt="Foto de perfil del usuario"
+              width="32"
+              height="32"
+              loading="lazy" />
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main-content" class="site-main">
+      <section class="dashboard-home" aria-labelledby="homeLogged-title">
+        <!-- TÍTULO ACCESIBLE (Oculto visualmente si el diseño no lo muestra, pero necesario para lectores de pantalla) -->
+        <h1 id="homeLogged-title" class="visually-hidden">
+          Panel principal de usuario
+        </h1>
+
+        <!-- ARRA SUPERIOR: BÚSQUEDA -->
+        <form
+          class="search-bar"
+          action="./networking.html"
+          method="get"
+          role="search"
+          aria-label="Buscar exalumnos">
+          <label for="search-alumni" class="visually-hidden"
+            >Buscar exalumnos
+          </label>
+          <div class="search-bar__wrapper">
+            <img
+              class="search-bar__icon"
+              src="../src/assets/icons/search-icon.svg"
+              alt=""
+              aria-hidden="true"
+              width="20"
+              height="20" />
+            <input
+              type="search"
+              id="search-alumni"
+              name="q"
+              class="search-bar__input"
+              placeholder="Buscar alumnos..." />
+          </div>
+        </form>
+
+        <!-- ACCESOS RÁPIDOS (Según mockup móvil/escritorio) -->
+        <div class="dashboard-home__grid">
+          <!-- Tarjeta 1: Comunidad / Networking -->
+          <article class="hub-card">
+            <figure class="hub-card__media">
+              <img
+                class="hub-card__image"
+                src="https://i.pravatar.cc/150?img=68"
+                alt="Exalumnos conversando en un encuentro de networking"
+                width="300"
+                height="200"
+                loading="lazy" />
+            </figure>
+            <div class="hub-card__body">
+              <h2 class="hub-card__title">Comunidad</h2>
+              <p class="hub-card__text">
+                Conecta con profesionales y compañeros de tu sector.
+              </p>
+              <a href="./networking.html" class="btn btn--outline hub-card__btn">
+                Explorar
+              </a>
+            </div>
+          </article>
+
+          <!-- Tarjeta 2: Ofertas de empleo -->
+          <article class="hub-card">
+            <figure class="hub-card__media">
+              <img
+                class="hub-card__image"
+                src="../src/img/01_img_jobPortalSection.webp"
+                alt="Espacio de trabajo tecnológico con ordenador portátil"
+                width="300"
+                height="200"
+                loading="lazy" />
+            </figure>
+            <div class="hub-card__body">
+              <h2 class="hub-card__title">Ofertas de empleo</h2>
+              <p class="hub-card__text">
+                Descubre vacantes adaptadas a tus habilidades y stack.
+              </p>
+              <a href="./jobs.html" class="btn btn--outline hub-card__btn">
+                Buscar ofertas
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- BARRA DE NAVEGACIÓN INFERIOR (Solo visible en móvil) -->
+    <nav class="mobile-nav" aria-label="Navegación móvil">
+      <a
+        href="./home.html"
+        class="mobile-nav__item mobile-nav__item--active"
+        aria-current="page">
+        <img
+          src="../src/assets/icons/home-icon.svg"
+          alt=""
+          aria-hidden="true"
+          width="24"
+          height="24" />
+        <span>Inicio</span>
+      </a>
+      <a href="./networking.html" class="mobile-nav__item">
+        <img
+          src="../src/assets/icons/Network-icon.svg"
+          alt=""
+          aria-hidden="true"
+          width="24"
+          height="24" />
+        <span>Comunidad</span>
+      </a>
+      <a href="./jobs.html" class="mobile-nav__item">
+        <img
+          src="../src/assets/icons/jobportal-icon.svg"
+          alt=""
+          aria-hidden="true"
+          width="24"
+          height="24" />
+        <span>Ofertas</span>
+      </a>
+      <a href="./events.html" class="mobile-nav__item">
+        <img
+          src="../src/assets/icons/events-icon.svg"
+          alt=""
+          aria-hidden="true"
+          width="24"
+          height="24" />
+        <span>Eventos</span>
+      </a>
+      <a href="./events.html" class="mobile-nav__item">
+        <img
+          src="../src/assets/icons/user-icon.svg"
+          alt=""
+          aria-hidden="true"
+          width="24"
+          height="24" />
+        <span>Eventos</span>
+      </a>
+    </nav>
+  </body>
+</html>

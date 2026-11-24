@@ -1,0 +1,695 @@
+/* ==========================================
+   LAYOUT (Estructura y Arquitectura)
+   ========================================== */
+
+/* ==========================================
+  1. CONTENEDORES GLOBALES
+  ========================================== */
+/* Centra el contenido y le da un margen lateral en móvil */
+.site-main,
+.site-footer__newsletter,
+.site-footer__main,
+.site-footer__bottom {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+}
+
+.site-header,
+.site-footer {
+  width: 100%;
+  max-width: 100%;
+  padding-inline: max(
+    var(--container-padding),
+    calc((100vw - var(--container-max-width)) / 2)
+  );
+}
+
+/* ==========================================
+  2. ESTRUCTURA DEL BODY
+  ========================================== */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.site-main {
+  flex-grow: 1; /* Empuja el footer hacia abajo */
+  padding-block: var(--space-8);
+}
+
+/* ==========================================
+  3. SITE HEADER (Base Escritorio)
+  ========================================== */
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-bg-body);
+}
+
+.site-header__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+/* Mobile: El menú de navegación baja a una segunda línea */
+.site-nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+.site-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+}
+
+.site-header__actions,
+.site-header__user-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+/* Tablet/Desktop: Menú en fila y enlaces centrados */
+@media (min-width: 48rem) {
+  .site-header {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding-inline: var(--space-8);
+  }
+
+  .site-header__brand,
+  .site-header__actions {
+    flex-shrink: 0;
+  }
+
+  .site-nav {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+    gap: var(--space-8);
+    margin-left: clamp(2rem, 8vw, 7rem);
+    width: auto;
+    margin-top: 0;
+  }
+
+  .site-nav__list {
+    justify-content: center;
+  }
+}
+
+/* ==========================================
+  4. AUTH PAGES (Login y Signup)
+  ========================================== */
+.signup-page,
+.login-page {
+  background-color: var(--color-bg-surface);
+}
+
+.signup-page__main,
+.login-page__main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  padding: var(--space-4);
+}
+
+/* En móvil, la tarjeta ocupa el 100% y no tiene sombra */
+.signup,
+.login {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 28rem;
+  margin-inline: auto;
+  background-color: var(--color-bg-body);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+/* En móvil, la imagen lateral se oculta (según mockup) */
+.signup__media,
+.login__media {
+  display: none;
+}
+
+/* El panel del formulario necesita padding en móvil */
+.signup__panel,
+.login__panel {
+  padding: var(--space-6);
+  width: 100%;
+}
+
+/* Tablet/Desktop: Imagen de fondo a pantalla completa */
+@media (min-width: 64rem) {
+  .signup-page__main,
+  .login-page__main {
+    padding: 0; /* Quitamos el padding para que la imagen toque los bordes */
+  }
+
+  .signup,
+  .login {
+    position: relative; /* Contexto para la imagen absoluta */
+    display: flex;
+    justify-content: center; /* Centra el formulario horizontalmente */
+    align-items: center; /* Centra el formulario verticalmente */
+    flex-direction: row;
+    width: 100%;
+    min-height: 100vh;
+    max-width: 100%;
+    box-shadow: none; /* Quitamos la sombra del contenedor global */
+    border-radius: 0;
+    background-color: transparent;
+  }
+
+  /* La imagen ahora es un fondo absoluto */
+  .signup__media,
+  .login__media {
+    display: block;
+    position: absolute;
+    inset: 0; /* La estira a los 4 bordes */
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Se pone por detrás */
+  }
+
+  .signup__media-image,
+  .login__media-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* El formulario flota por encima de la imagen */
+  .signup__panel,
+  .login__panel {
+    position: relative;
+    z-index: 2; /* Se pone por delante de la imagen */
+    background-color: var(--color-bg-body); /* Fondo blanco */
+    width: 100%;
+    max-width: 52rem; /* Ancho del formulario */
+    padding: var(--space-16) var(--space-20); /* Espacio interior */
+    border-radius: 0; /* <-- Quitamos las esquinas redondeadas */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Sombra para que destaque sobre la foto */
+  }
+}
+
+/* ==========================================
+  5. HERO SECTION (Index)
+  ========================================== */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra el texto y la imagen horizontalmente */
+  text-align: center; /* Centra el texto internamente */
+  /* Le damos MUCHO más espacio arriba y abajo */
+  padding-top: var(--space-12);
+  padding-bottom: var(--space-8);
+}
+
+/* Agrupamos el texto y los botones para darles su propio espaciado */
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: var(
+    --space-8
+  ); /* 40px de separación entre los botones y la imagen */
+  max-width: 45rem; /* Para que el subtítulo no se estire demasiado en escritorio */
+}
+
+.hero__title {
+  font-size: var(--text-5xl);
+  margin-top: var(--space-12);
+  margin-bottom: var(--space-12);
+}
+
+.hero__subtitle {
+  font-size: var(--text-lg);
+  color: var(--color-text-muted);
+  margin-top: var(--space-12);
+  margin-bottom: var(--space-12);
+}
+
+.hero__media {
+  width: 100%;
+  max-width: 50rem; /* 800px aprox, para que no se estire demasiado en pantallas grandes */
+}
+
+.hero__image {
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+/* ==========================================
+  6. CUADRÍCULAS (Grids de tarjetas)
+  ========================================== */
+/* Beneficios (Index) - 1 col mobile, 3 col desktop */
+.benefits__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  margin-top: var(--space-6);
+}
+
+/* Testimonios (Index) - 1 col mobile, 3 col desktop */
+.testimonials__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  margin-top: var(--space-6);
+}
+
+.testimonials__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  margin-top: var(--space-6);
+}
+
+.dashboard-home__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  margin-top: var(--space-6);
+}
+
+@media (min-width: 48rem) {
+  .benefits__list,
+  .testimonials__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .dashboard-home__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ==========================================
+  7. NETWORKING (Grid y columnas)
+  ========================================== */
+.networking__top-bar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+@media (min-width: 48rem) {
+  .networking__top-bar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/* Grid de alumnos (1 col mobile, 2 tablet, 4 desktop) */
+.alumni-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+}
+
+@media (min-width: 48rem) {
+  .alumni-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.networking__columns {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+@media (min-width: 64rem) {
+  .alumni-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .networking__columns {
+    grid-template-columns: 1fr 1.5fr; /* Sugerencias ocupa un poco más */
+  }
+}
+
+/* ==========================================
+  8. JOBS (Grid de ofertas) 
+  ========================================== */
+.jobs__header {
+  margin-bottom: var(--space-6);
+}
+
+.jobs-filters {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+.jobs-filters__selects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+@media (min-width: 48rem) {
+  /* Ocultamos el h1 de página en Jobs móvil porque ya aparece en el header superior */
+  .jobs-page .jobs__header {
+    display: none;
+  }
+
+  .jobs-filters {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--space-4);
+  }
+
+  .jobs-filters__group--search {
+    flex: 1 1 18rem;
+    max-width: 24rem;
+  }
+
+  .jobs-filters__selects {
+    flex-wrap: nowrap;
+  }
+}
+
+.jobs__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+@media (min-width: 48rem) {
+  .jobs__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+  }
+}
+
+@media (min-width: 64rem) {
+  .jobs__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ==========================================
+  9. SITE FOOTER
+  ========================================== */
+.site-footer {
+  background-color: var(--color-bg-footer);
+  color: var(--color-text-inverse);
+  padding-top: var(--space-8);
+}
+
+.site-footer__newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-bottom: var(--space-8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.site-footer__main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+  padding-block: var(--space-8);
+}
+
+.footer-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-4);
+}
+
+.site-footer__bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  padding-block: var(--space-4);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-links {
+  display: flex;
+  gap: var(--space-4);
+}
+
+@media (min-width: 48rem) {
+  .site-footer__main {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .footer-nav__list {
+    justify-content: flex-end;
+  }
+
+  .site-footer__bottom {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* ==========================================
+  10. LÓGICA RESPONSIVE MÓVIL
+  ========================================== */
+/* Ocultar elementos móviles por defecto (Escritorio) */
+.mobile-nav,
+.site-header__back-btn,
+.site-header__title-mobile,
+.show-on-mobile {
+  display: none;
+}
+
+@media (max-width: 48rem) {
+  /* --- A. INDEX (Splash Screen) --- */
+  .home-page .site-header,
+  .home-page .benefits,
+  .home-page .testimonials,
+  .home-page .site-footer,
+  .home-page .hero__media,
+  .home-page .hero__title {
+    display: none !important;
+  }
+
+  body.home-page {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  /* El main ocupa todo el espacio disponible */
+  .home-page .site-main {
+    flex-grow: 1; /* Esto es la clave, no usar height: 100% */
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-4);
+  }
+
+  /* El hero también se estira */
+  .home-page .hero {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* El contenedor central: relative para anclar el botón */
+  .home-page .hero__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el logo y el texto verticalmente */
+    align-items: center;
+    flex-grow: 1;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* El logo */
+  .home-page .hero__mobile-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    margin-bottom: var(--space-4);
+  }
+
+  .home-page .hero__mobile-logo-mark {
+    width: 48px;
+    height: auto;
+  }
+
+  .home-page .hero__mobile-logo-text {
+    width: 180px;
+    height: auto;
+  }
+
+  /* El texto */
+  .home-page .hero__subtitle {
+    display: block;
+    font-size: var(--text-base);
+    color: var(--color-text-muted);
+    margin: 0;
+    max-width: 80%;
+  }
+
+  /* EL BOTÓN: anclado al fondo con posicionamiento absoluto */
+  .home-page .hero__actions {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding-bottom: var(--space-4);
+  }
+
+  .home-page .hero__actions .btn--outline {
+    display: none;
+  }
+
+  .home-page .hero__actions .btn--primary {
+    width: 100%;
+    padding: var(--space-4);
+    font-size: var(--text-lg);
+    border-radius: var(--radius-md);
+  }
+
+  /* --- B. HEADER AUTENTICADO (Networking/Jobs) --- */
+  /* Forzamos al header a quedarse en una sola línea */
+  .site-header--authenticated {
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Ocultamos el logo y los iconos de escritorio */
+  .site-header__brand,
+  .site-nav__list,
+  .hide-on-mobile {
+    display: none !important;
+  }
+
+  /* Mostramos la flecha atrás */
+  .site-header__back-btn {
+    display: flex;
+    font-size: var(--text-2xl);
+    color: var(--color-text-main);
+    width: 40px;
+    flex-shrink: 0;
+  }
+
+  /* Mostramos el título "Networking" centrado */
+  .site-header__title-mobile {
+    display: block;
+    font-family: var(--font-primary);
+    font-size: var(--text-lg);
+    font-weight: var(--weight-bold);
+    color: var(--color-text-main);
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
+  }
+
+  /* Evitamos que menú (contiene los iconos) baje a siguiente línea */
+  .site-nav {
+    width: auto;
+    margin-top: 0;
+    flex-shrink: 0;
+  }
+
+  /* Mostramos el icono de gráfico */
+  .show-on-mobile {
+    display: flex;
+  }
+
+  /* Ajustamos el espacio entre el gráfico y el avatar */
+  .site-header__user-actions {
+    gap: var(--space-1);
+  }
+  /* --- C. NETWORKING (Contenido) --- */
+  .networking__columns {
+    display: none !important;
+  }
+
+  .mobile-nav {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-bg-body);
+    border-top: 1px solid var(--color-border);
+    justify-content: space-around;
+    padding: var(--space-2) 0;
+    z-index: 100;
+  }
+
+  body {
+    padding-bottom: 80px;
+  }
+
+  /* --- D. AUTH PAGES (Signup / Login) --- */
+  /* 2. Fondo blanco puro en toda la pantalla */
+  .signup-page,
+  .login-page {
+    background-color: var(--color-bg-body) !important;
+  }
+
+  /* 2. El main ocupa todo el alto */
+  .signup-page__main,
+  .login-page__main {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-4) !important; /* Un poco de margen exterior */
+    min-height: 100vh;
+  }
+
+  /* 3. MANTENEMOS LA TARJETA: fondo blanco, esquinas redondeadas y sombra sutil */
+  .signup,
+  .login {
+    background-color: var(--color-bg-body) !important;
+    box-shadow: var(--shadow-sm) !important; /* Sombra sutil para que destaque */
+    border-radius: var(--radius-lg) !important; /* Esquinas redondeadas */
+    max-width: 100% !important;
+    min-height: auto; /* Dejamos que la altura se adapte al contenido */
+    padding: var(--space-6) !important; /* Margen interior */
+  }
+
+  /* 4. Quitamos paddings extras del panel */
+  .signup__panel,
+  .login__panel {
+    padding: 0 !important;
+  }
+}
+
+/* En escritorio, ocultamos el contenedor móvil del logo */
+@media (min-width: 48rem) {
+  .hero__mobile-brand {
+    display: none;
+  }
+}

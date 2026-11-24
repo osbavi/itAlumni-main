@@ -1,0 +1,194 @@
+[
+  {
+    "id": "evt-01",
+    "title": "Introducción práctica a TypeScript",
+    "date": "2026-11-24",
+    "time": "18:00",
+    "description": "Taller práctico para empezar a tipar proyectos JavaScript y mejorar el mantenimiento del código.",
+    "type": "workshop"
+  },
+  {
+    "id": "evt-02",
+    "title": "Networking de exalumnes en Barcelona",
+    "date": "2026-11-26",
+    "time": "19:00",
+    "description": "Encuentro informal para compartir experiencias post-bootcamp y ampliar contactos en el sector tech.",
+    "type": "networking"
+  },
+  {
+    "id": "evt-03",
+    "title": "Cómo preparar entrevistas técnicas júnior",
+    "date": "2026-11-28",
+    "time": "17:30",
+    "description": "Charla con consejos reales sobre pruebas técnicas, portafolios y comunicación en procesos de selección.",
+    "type": "talk"
+  },
+  {
+    "id": "evt-04",
+    "title": "Sesión de mentoría: primer empleo en Front-end",
+    "date": "2026-12-01",
+    "time": "18:30",
+    "description": "Resolución de dudas y revisión de proyectos con profesionales en activo del desarrollo front-end.",
+    "type": "mentoring"
+  },
+  {
+    "id": "evt-05",
+    "title": "Fundamentos de Docker para desarrolladores",
+    "date": "2026-12-03",
+    "time": "18:00",
+    "description": "Aprende a contenedorizar aplicaciones locales y entender el flujo básico de entornos reproducibles.",
+    "type": "workshop"
+  },
+  {
+    "id": "evt-06",
+    "title": "Arquitectura limpia en APIs con Node.js",
+    "date": "2026-12-05",
+    "time": "17:00",
+    "description": "Charla técnica sobre separación de responsabilidades, validación y escalabilidad en servicios back-end.",
+    "type": "talk"
+  },
+  {
+    "id": "evt-07",
+    "title": "Desayuno tech: transición laboral al sector digital",
+    "date": "2026-12-09",
+    "time": "09:30",
+    "description": "Espacio de intercambio entre personas que han cambiado de sector y exalumnes recién incorporados.",
+    "type": "networking"
+  },
+  {
+    "id": "evt-08",
+    "title": "Accesibilidad web (WCAG 2.2) en la práctica",
+    "date": "2026-12-11",
+    "time": "18:00",
+    "description": "Revisión de semántica HTML, contrastes, foco por teclado y etiquetas ARIA en interfaces reales.",
+    "type": "workshop"
+  },
+  {
+    "id": "evt-09",
+    "title": "Mentoría de portafolio y GitHub para perfiles júnior",
+    "date": "2026-12-14",
+    "time": "18:30",
+    "description": "Qué destacar en tu repositorio, cómo redactar buenos README y cómo presentar tus prácticas.",
+    "type": "mentoring"
+  },
+  {
+    "id": "evt-10",
+    "title": "Testing automatizado y escenarios BDD",
+    "date": "2026-12-16",
+    "time": "17:30",
+    "description": "Cómo traducir criterios de aceptación en pruebas claras y fiables durante el desarrollo.",
+    "type": "talk"
+  },
+  {
+    "id": "evt-11",
+    "title": "Introducción a Flutter y desarrollo móvil multiplataforma",
+    "date": "2026-12-18",
+    "time": "18:00",
+    "description": "Primeros pasos con widgets, estado y estructura de aplicaciones móviles con Dart.",
+    "type": "workshop"
+  },
+  {
+    "id": "evt-12",
+    "title": "Encuentro de cierre de año de la comunidad",
+    "date": "2026-12-21",
+    "time": "19:00",
+    "description": "Balance del año, aprendizajes compartidos y conexiones entre promociones de la academia.",
+    "type": "networking"
+  },
+  {
+    "id": "evt-13",
+    "title": "Consultas SQL y modelado de datos relacionales",
+    "date": "2027-01-12",
+    "time": "18:00",
+    "description": "Taller práctico sobre índices, joins, normalización y rendimiento en bases de datos.",
+    "type": "workshop"
+  },
+  {
+    "id": "evt-14",
+    "title": "El día a día de un equipo DevOps y CI/CD",
+    "date": "2027-01-14",
+    "time": "18:30",
+    "description": "Charla sobre automatización de despliegues, pipelines y colaboración con desarrollo y QA.",
+    "type": "talk"
+  },
+  {
+    "id": "evt-15",
+    "title": "Mentoría sobre estrategia de búsqueda de empleo tech",
+    "date": "2027-01-19",
+    "time": "17:30",
+    "description": "Planificación semanal, seguimiento de candidaturas y networking efectivo sin saturarte.",
+    "type": "mentoring"
+  },
+  {
+    "id": "evt-16",
+    "title": "Gestión de estado y componentes reutilizables en Front-end",
+    "date": "2027-01-21",
+    "time": "18:00",
+    "description": "Cómo diseñar componentes predecibles y fáciles de mantener a medida que crece la aplicación.",
+    "type": "workshop"
+  },
+  {
+    "id": "evt-17",
+    "title": "Mesa redonda: trabajar en remoto vs. presencial",
+    "date": "2027-01-26",
+    "time": "18:30",
+    "description": "Ventajas, retos de comunicación y hábitos recomendados para los primeros meses en una empresa.",
+    "type": "networking"
+  },
+  {
+    "id": "evt-18",
+    "title": "Seguridad básica en aplicaciones web modernas",
+    "date": "2027-01-28",
+    "time": "18:00",
+    "description": "Charla introductoria sobre buenas prácticas, manejo de datos y errores frecuentes a evitar.",
+    "type": "talk"
+  },
+  {
+    "id": "evt-19",
+    "title": "Bootcamp intensivo de repaso: Git, ramas y Pull Requests",
+    "date": "2027-02-02",
+    "time": "17:30",
+    "description": "Sesión práctica para afianzar flujos de trabajo con ramas, resolución de conflictos y revisiones.",
+    "type": "bootcamp"
+  },
+  {
+    "id": "evt-20",
+    "title": "Mentoría individual de revisión de CV y LinkedIn",
+    "date": "2027-02-04",
+    "time": "17:00",
+    "description": "Claves para enfocar tu perfil técnico hacia vacantes acordes con tu experiencia y stack.",
+    "type": "mentoring"
+  },
+  {
+    "id": "evt-21",
+    "title": "Rendimiento web y optimización mobile-first",
+    "date": "2027-02-09",
+    "time": "18:00",
+    "description": "Cómo cuidar tiempos de carga, imágenes, diseño adaptable y fluidez en dispositivos móviles.",
+    "type": "workshop"
+  },
+  {
+    "id": "evt-22",
+    "title": "Charla: de perfil júnior a liderazgo técnico",
+    "date": "2027-02-11",
+    "time": "18:30",
+    "description": "Testimonios y aprendizajes sobre crecimiento profesional, toma de decisiones y mentoría.",
+    "type": "talk"
+  },
+  {
+    "id": "evt-23",
+    "title": "Bootcamp relámpago de depuración y lectura de errores",
+    "date": "2027-02-16",
+    "time": "18:00",
+    "description": "Ejercicios guiados para diagnosticar fallos en HTML, CSS y JavaScript/TypeScript con rapidez.",
+    "type": "bootcamp"
+  },
+  {
+    "id": "evt-24",
+    "title": "Networking abierto: proyectos colaborativos entre exalumnes",
+    "date": "2027-02-18",
+    "time": "19:00",
+    "description": "Conoce a compañeros interesados en montar pequeños proyectos conjuntos para ganar experiencia práctica.",
+    "type": "networking"
+  }
+]

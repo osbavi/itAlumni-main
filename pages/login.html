@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inicia sesión | ITAlumni</title>
+    <meta
+      name="description"
+      content="Accede a tu cuenta de ITAlumni para conectar con la comunidad." />
+
+    <meta name="robots" content="noindex, follow" />
+    <meta name="theme-color" content="#DF007F" />
+
+    <link
+      rel="icon"
+      href="../src/assets/icons/favicon-color.svg"
+      type="image/svg+xml" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;1,400&family=Poppins:wght@500;600;700&display=swap"
+      rel="stylesheet" />
+
+    <!-- Hojas de estilo en orden de cascada (Mobile First) -->
+    <link rel="stylesheet" href="../src/styles/tokens.css" />
+    <link rel="stylesheet" href="../src/styles/base.css" />
+    <link rel="stylesheet" href="../src/styles/layout.css" />
+    <link rel="stylesheet" href="../src/styles/components.css" />
+  </head>
+
+  <body class="login-page">
+    <!-- criterios de accessibilidad WCAG 2.2 navegación teclado -->
+    <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+
+    <main id="main-content" class="login-page__main">
+      <section class="login" aria-labelledby="login-title">
+        <!-- IMAGEN LATERAL (solo desktop) -->
+        <figure class="login__media">
+          <img
+            class="login__media-image"
+            src="../src/img/02_img_signupSectionLaptop.webp"
+            alt=""
+            aria-hidden="true"
+            width="800"
+            height="1200" />
+          <figcaption class="visually-hidden">
+            Comunidad de exalumnos de IT Academy
+          </figcaption>
+        </figure>
+
+        <div class="login__panel">
+          <header class="login__header">
+            <h1 id="login-title" class="login__title">Inicia sesión</h1>
+            <p class="login__subtitle">
+              Bienvenido de nuevo. Conecta con tu comunidad.
+            </p>
+          </header>
+
+          <form
+            class="login-form"
+            id="login-form"
+            action="./home.html"
+            method="post"
+            novalidate>
+            <!-- Campo: Email -->
+            <div class="login-form__field">
+              <label for="login-email" class="login-form__label visually-hidden">
+                Correo electrónico
+              </label>
+              <div class="login-form__input-wrapper">
+                <img
+                  class="login-form__icon"
+                  src="../src/assets/icons/email-icon.svg"
+                  alt=""
+                  aria-hidden="true"
+                  width="20"
+                  height="20" />
+                <input
+                  id="login-email"
+                  class="login-form__input"
+                  type="email"
+                  name="email"
+                  placeholder="Tu correo electrónico"
+                  autocomplete="email"
+                  required
+                  aria-describedby="login-email-error" />
+              </div>
+              <p
+                id="login-email-error"
+                class="login-form__error"
+                role="alert"
+                hidden></p>
+            </div>
+
+            <!-- Campo: Contraseña -->
+            <div class="login-form__field">
+              <label for="login-password" class="login-form__label visually-hidden">
+                Contraseña
+              </label>
+              <div class="login-form__input-wrapper">
+                <img
+                  class="login-form__icon"
+                  src="../src/assets/icons/password-icon.svg"
+                  alt=""
+                  aria-hidden="true"
+                  width="20"
+                  height="20" />
+                <input
+                  id="login-password"
+                  class="login-form__input"
+                  type="password"
+                  name="password"
+                  placeholder="Tu contraseña"
+                  autocomplete="current-password"
+                  required
+                  aria-describedby="login-password-error" />
+              </div>
+              <p
+                id="login-password-error"
+                class="login-form__error"
+                role="alert"
+                hidden></p>
+            </div>
+
+            <!-- Recordar contraseña / Olvidar contraseña -->
+            <div class="login-form__actions">
+              <label class="login-form__remember">
+                <input
+                  type="checkbox"
+                  name="remember"
+                  class="login-form__checkbox" />
+                Recuérdame
+              </label>
+              <a href="#" class="login-form__forgot-link">
+                ¿Has olvidado tu contraseña?
+              </a>
+            </div>
+
+            <!-- Botón principal -->
+            <a href="./home.html" class="btn btn--primary login-form__submit">
+              Entrar
+            </a>
+
+            <!-- Separador "o" -->
+            <div class="login-form__divider">
+              <span class="login-form__divider-text">o</span>
+            </div>
+
+            <!-- Botones sociales (mismos que signup) -->
+            <button
+              type="button"
+              class="login-form__social login-form__social--apple">
+              <img
+                class="login-form__social-icon"
+                src="../src/assets/icons/apple-logo-color.svg"
+                alt=""
+                aria-hidden="true"
+                width="20"
+                height="20" />
+              <span>Continuar con Apple</span>
+            </button>
+
+            <button
+              type="button"
+              class="login-form__social login-form__social--google">
+              <img
+                class="login-form__social-icon"
+                src="../src/assets/icons/google-logo-color.svg"
+                alt=""
+                aria-hidden="true"
+                width="20"
+                height="20" />
+              <span>Continuar con Google</span>
+            </button>
+
+            <button
+              type="button"
+              class="login-form__social login-form__social--facebook">
+              <img
+                class="login-form__social-icon"
+                src="../src/assets/icons/facebook-logo-color.svg"
+                alt=""
+                aria-hidden="true"
+                width="20"
+                height="20" />
+              <span>Continuar con Facebook</span>
+            </button>
+
+            <!-- Link a registro -->
+            <p class="login-form__signup-prompt">
+              ¿No tienes cuenta?
+              <a href="./signup.html" class="login-form__link">Regístrate</a>
+            </p>
+          </form>
+
+          <!-- Feedback global (para JS) -->
+          <div class="login-form__feedback" role="status" aria-live="polite"></div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

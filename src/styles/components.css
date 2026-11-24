@@ -1,0 +1,1203 @@
+/* ==========================================
+   COMPONENTES (Base Escritorio)
+   ========================================== */
+
+/* 1. ARREGLAR AVATARES (Que sean redondos) */
+.testimonial-card__avatar {
+  border-radius: 50%; /* Hace la imagen perfectamente circular */
+  object-fit: cover; /* Evita que la foto se deforme si no es cuadrada */
+}
+
+/* 2. ARREGLAR ESTRELLAS (Que estén en línea) */
+.testimonial-card__rating {
+  display: flex; /* Pone las estrellas una al lado de otra */
+  align-items: center;
+  gap: var(--space-1); /* Pequeño espacio entre estrellas */
+}
+
+/* La cabecera va en fila (Avatar | Nombre + Estrellas) */
+.testimonial-card__header {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Centrado vertical */
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+/* El contenedor de la derecha va en columna */
+.testimonial-card__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinea a la izquierda */
+  gap: 2px;
+}
+
+/* El nombre (ahora es una etiqueta <cite>) */
+.testimonial-card__author {
+  font-weight: var(--weight-bold);
+  font-size: var(--text-base);
+  color: var(--color-text-main);
+  font-style: normal; /* Le quita la cursiva fea que trae <cite> por defecto */
+}
+
+/* 3. Controles de testimonios */
+.testimonials__controls {
+  display: flex;
+  justify-content: center; /* Centra los botones horizontalmente */
+  align-items: center;
+  gap: var(
+    --space-3
+  ); /* Espacio entre el botón de ir a la izquierda y a la derecha */
+  margin-top: var(--space-8); /* Separa los botones de las tarjetas */
+  margin-bottom: var(--space-8);
+}
+
+.testimonials__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem; /* 40px de ancho */
+  height: 2.5rem; /* 40px de alto */
+  border-radius: 50%; /* Forma circular */
+  background-color: var(--color-bg-surface); /* Fondo gris muy clarito */
+  border: 1px solid var(--color-border); /* Borde sutil */
+  color: var(--color-text-muted);
+  font-size: var(--text-xl);
+  transition: all 0.2s ease;
+}
+
+.testimonials__btn:hover {
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  border-color: var(--color-primary);
+}
+
+/* ==========================================
+   BENEFICIOS Y TARJETAS DE ACCESO RÁPIDO (HOME)
+   ========================================== */
+.benefit-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra el icono, el texto y el enlace  */
+  text-align: center; /* Centra el texto */
+  background-color: var(--color-bg-body);
+  padding: var(--space-6);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.benefit-card__icon {
+  margin-inline: auto; /* Centra el icono horizontalmente */
+  margin-bottom: var(--space-3);
+}
+
+.benefit-card__text {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-4);
+}
+
+/* Empujar el botón al fondo de la tarjeta */
+.benefit-card__btn {
+  margin-top: auto;
+}
+
+.hub-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg-body);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.hub-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.hub-card__media {
+  margin: var(--space-3) var(--space-3) 0;
+  aspect-ratio: 16 / 10;
+  width: calc(100% - (var(--space-3) * 2));
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  background-color: var(--color-bg-surface);
+  flex-shrink: 0;
+}
+
+.hub-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+}
+
+.hub-card__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: var(--space-5);
+}
+
+.hub-card__title {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  color: var(--color-text-main);
+  margin-bottom: var(--space-2);
+}
+
+.hub-card__text {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-4);
+}
+
+.hub-card__btn {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+/* ==========================================
+   TARJETAS DE TESTIMONIOS
+   ========================================== */
+.testimonial-card {
+  background-color: var(--color-bg-body);
+  padding: var(--space-6);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.testimonial-card__quote {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-4);
+  font-style: italic;
+}
+
+/* ==========================================
+   BOTONES (Design System)
+   ========================================== */
+/* 1. Estructura base del botón (el esqueleto) */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2); /* Espacio entre el icono y el texto */
+  padding: var(--space-2) var(--space-6); /* Arriba/abajo y lados */
+  font-family: var(--font-primary);
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-sm);
+  text-decoration: none;
+  border-radius: var(--radius-pill); /* El truco para hacerlos tipo píldora */
+  border: 2px solid transparent; /* Borde transparente por defecto para que no salte al hacer hover */
+  cursor: pointer;
+  transition: all 0.2s ease-in-out; /* Animación suave al pasar el ratón */
+  white-space: nowrap; /* Evita que el texto se rompa */
+}
+
+/* 2. Modificador: Botón Primario (Fondo rosa) */
+.btn--primary {
+  background: var(--color-brand-gradient);
+  color: var(--color-text-inverse);
+}
+
+.btn--primary:hover {
+  opacity: 0.9; /* En lugar de cambiar de color, lo hacemos ligeramente transparente */
+}
+
+/* 3. Modificador: Botón Outline (Borde rosa, fondo blanco) */
+.btn--outline {
+  background-color: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn--outline:hover {
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+}
+
+/* ICONO blanco en hover para el botón Outline */
+.btn--outline:hover .btn__icon {
+  filter: brightness(0) invert(1); /* Convierte cualquier color a blanco puro */
+}
+
+/* 4. Modificador: Botón Soft (Rosa clarito) */
+.btn--soft {
+  background-color: rgba(223, 0, 127, 0.08);
+  color: var(--color-primary);
+  border: none;
+}
+
+.btn--soft:hover {
+  background-color: rgba(223, 0, 127, 0.15);
+}
+
+/* 5. El icono dentro del botón */
+.btn__icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+}
+
+/* ==========================================
+   NAVEGACIÓN (Enlaces del Header)
+   ========================================== */
+.site-nav__link {
+  color: var(--color-text-muted);
+  font-weight: var(--weight-medium);
+  font-size: var(--text-sm);
+  padding-block: var(--space-2);
+  position: relative; /* Necesario para posicionar la línea del activo */
+  transition: color 0.2s ease;
+}
+
+.site-nav__link:hover {
+  color: var(--color-primary);
+}
+
+/* El enlace activo tiene color rosa y una línea inferior */
+.site-nav__link--active {
+  color: var(--color-primary);
+}
+
+/* Línea inferior simulada con un pseudo-elemento */
+.site-nav__link--active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 2px;
+  background-color: var(--color-primary);
+  border-radius: var(--radius-pill);
+}
+
+.site-header__avatar-link {
+  display: inline-flex;
+  border-radius: 50%;
+  overflow: hidden; /* Recorta la foto */
+  flex-shrink: 0;
+}
+
+.site-header__avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+  display: block;
+}
+
+/* ==========================================
+   SECCIONES Y TÍTULOS
+   ========================================== */
+/* 1. Centrar todos los títulos principales de sección */
+.benefits__title,
+.testimonials__title {
+  text-align: center;
+  margin-bottom: var(--space-12); /* espacio debajo del título */
+}
+
+.benefits {
+  margin-top: var(--space-16); /* separación entre secciones */
+}
+
+.testimonials {
+  margin-top: var(--space-20); /* separación entre secciones */
+}
+
+/* 3. Asegurarnos de que el contenedor de las tarjetas esté centrado */
+.benefits__list,
+.testimonials__list {
+  justify-content: center;
+}
+
+/* ==========================================
+   FOOTER COMPONENTS
+   ========================================== */
+/* --- 1. Formulario de Newsletter --- */
+.newsletter-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: transparent; /* Sin fondo blanco */
+  border: 1px solid var(--color-text-footer-muted); /* Borde gris clarito */
+  border-radius: var(--radius-pill); /* Forma de píldora */
+  width: 100%;
+  max-width: 28rem;
+  margin-top: var(--space-4);
+  padding: 0; /* Quitamos el padding para que el botón toque el borde */
+  overflow: hidden; /* ¡TRUCO! Esto hace que el botón herede la curva de la píldora por la derecha */
+  transition: border-color 0.2s ease;
+}
+
+/* Efecto cuando el usuario hace clic en el input */
+.newsletter-form:focus-within {
+  border-color: var(--color-primary); /* El borde se vuelve rosa al escribir */
+}
+
+/* La zona del input */
+.newsletter-form__field {
+  display: flex;
+  align-items: center;
+  flex-grow: 1; /* Empuja el botón a la derecha */
+  padding-left: var(--space-4); /* Espacio a la izquierda */
+}
+
+/* El icono de email dentro del input */
+.newsletter-form__icon {
+  margin-right: var(--space-2);
+  opacity: 0.8; /* Un poco transparente */
+}
+
+/* El input en sí (quitamos bordes y fondos) */
+.newsletter-form__input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  outline: none; /* Quitamos el borde azul por defecto al hacer clic */
+  font-size: var(--text-sm);
+  color: var(--color-text-inverse); /* Texto blanco al escribir */
+}
+
+.newsletter-form__input::placeholder {
+  color: var(--color-text-footer-muted); /* Placeholder gris claro */
+}
+
+/* El botón de suscribirse */
+.newsletter-form__submit {
+  padding: var(--space-3) var(--space-5); /* Un poco más alto */
+  font-size: var(--text-sm);
+  border-radius: 0; /* Le quitamos el redondeo al botón... */
+  flex-shrink: 0;
+  border: none;
+}
+
+@media (max-width: 30rem) {
+  .newsletter-form {
+    flex-direction: column;
+    background-color: transparent;
+    border: none; /* Quitamos el borde general en móvil */
+    overflow: visible;
+    gap: var(--space-2);
+  }
+  .newsletter-form__field {
+    border: 1px solid var(--color-text-footer-muted);
+    border-radius: var(--radius-pill);
+    padding: var(--space-3) var(--space-4);
+    width: 100%;
+  }
+  .newsletter-form__submit {
+    width: 100%;
+    border-radius: var(--radius-pill); /* Devolvemos la curva al botón en móvil */
+  }
+}
+
+.site-footer__heading {
+  font-family: var(--font-primary);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.5px;
+}
+
+/* --- 2. Enlaces del Footer --- */
+.footer-nav__link {
+  color: var(--color-text-footer-muted);
+  font-size: var(--text-sm);
+  transition: color 0.2s ease;
+}
+
+.footer-nav__link:hover {
+  color: var(--color-text-inverse); /* Se vuelve blanco puro al pasar el ratón */
+}
+
+/* --- 3. Selector de Idioma --- */
+.site-footer__select {
+  background-color: transparent;
+  color: var(--color-text-footer-muted);
+  border: 1px solid var(--color-text-footer-muted);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-sm);
+  cursor: pointer;
+  /* Truco para quitar la flecha nativa y poner la nuestra (opcional pero recomendado) */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23d0d5dd%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.7rem top 50%;
+  background-size: 0.65rem auto;
+  padding-right: 2rem;
+}
+
+.site-footer__select:hover {
+  border-color: var(--color-text-inverse);
+}
+
+/* --- 4. Copyright (Texto de abajo) --- */
+.site-footer__copy {
+  color: var(--color-text-footer-muted);
+  font-size: var(--text-xs); /* Texto muy pequeñito */
+  text-align: center;
+}
+
+.site-footer__copy a {
+  color: var(--color-text-footer-muted);
+  transition: color 0.2s ease;
+}
+
+.site-footer__copy a:hover {
+  color: var(--color-text-inverse);
+}
+
+@media (min-width: 48rem) {
+  .site-footer__copy {
+    text-align: left;
+  }
+}
+
+/* --- 5. Iconos de Redes Sociales --- */
+.social-links__link {
+  display: inline-flex;
+  transition: opacity 0.2s ease;
+}
+
+.social-links__link:hover {
+  opacity: 0.7; /* Se atenúan un poco al pasar el ratón */
+}
+
+.social-links__icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* ==========================================
+   NETWORKING COMPONENTS (Base Escritorio)
+   ========================================== */
+/* --- 1. Barra de Búsqueda --- */
+.search-bar {
+  width: 100%;
+  max-width: 25rem; /* Ancho máximo del buscador */
+}
+
+.search-bar__wrapper {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-2) var(--space-3);
+  transition: border-color 0.2s ease;
+}
+
+.search-bar__wrapper:focus-within {
+  border-color: var(--color-primary);
+}
+
+.search-bar__icon {
+  margin-right: var(--space-2);
+  opacity: 0.5;
+}
+
+.search-bar__input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  outline: none;
+  font-size: var(--text-sm);
+}
+
+/* --- 2. Filtros de la barra superior --- */
+.networking__filters {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.networking__filters-label {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.networking__filter-btn {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  font-weight: var(--weight-medium);
+  padding: var(--space-1) var(--space-2);
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.networking__filter-btn:hover {
+  color: var(--color-text-main);
+}
+
+.networking__filter-btn--active {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+}
+
+/* --- 3. Tarjetas de Alumni (Grid de 4 columnas) --- */
+.alumni-card {
+  background-color: var(--color-bg-body);
+  padding: var(--space-5);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  gap: var(--space-3);
+  align-items: start;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.alumni-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.alumni-card__info {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  min-width: 0;
+}
+
+.alumni-card__image {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+}
+
+.alumni-card__name {
+  font-size: var(--text-base);
+  font-weight: var(--weight-bold);
+  margin-bottom: 2px;
+}
+
+.alumni-card__class {
+  display: block;
+  font-size: var(--text-xs);
+  font-weight: var(--weight-medium);
+  color: var(--color-primary);
+  margin-bottom: var(--space-2);
+}
+
+.alumni-card__role {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-2);
+}
+
+.alumni-card__location {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  margin-bottom: 0;
+}
+
+.alumni-card__btn {
+  grid-column: 1 / -1;
+  grid-row: 2 / 3;
+  margin-top: var(--space-2);
+  width: 100%;
+}
+
+/* --- 4. Actividad Reciente --- */
+.recent-activity {
+  background-color: var(--color-bg-surface);
+  padding: var(--space-5);
+  border-radius: var(--radius-md);
+}
+
+.recent-activity__title {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  margin-bottom: var(--space-4);
+}
+
+.recent-activity__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.recent-activity__item {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.recent-activity__item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* --- 5. Sugerencias (Filas) --- */
+.suggestions {
+  background-color: var(--color-bg-body);
+  padding: var(--space-5);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+}
+
+.suggestions__title {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  margin-bottom: var(--space-4);
+}
+
+.suggestions__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.alumni-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Centra la info y el botón verticalmente */
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.alumni-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.alumni-row__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.alumni-row__name {
+  font-size: var(--text-base);
+  font-weight: var(--weight-bold);
+}
+
+.alumni-row__role {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.alumni-row__location {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+
+.alumni-row__btn {
+  padding: var(--space-2) var(--space-4); /* Un poco más estrecho que los btn normales */
+  font-size: var(--text-sm);
+}
+
+/* ==========================================
+   NETWORKING COMPONENTS (Móvil)
+   ========================================== */
+/* Por defecto (Escritorio): Ocultamos el año y la foto */
+/* .alumni-card__class,
+.alumni-card__image {
+  display: none;
+} */
+
+@media (max-width: 48rem) {
+  .networking__filters {
+    gap: var(--space-2);
+  }
+
+  .networking__filters-label {
+    font-size: var(--text-xs);
+  }
+
+  .networking__filter-btn {
+    font-size: var(--text-xs);
+    padding: var(--space-1);
+  }
+  /* 1. Grid de 1 columna para las tarjetas */
+  .alumni-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+
+  /* 2. Tarjeta en formato horizontal (Texto | Foto) */
+  .alumni-card {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding: var(--space-4);
+    gap: var(--space-3);
+    align-items: center;
+  }
+
+  /* 3. Mostramos el año (Class of...) */
+  .alumni-card__class {
+    display: block;
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    margin-bottom: 2px;
+  }
+
+  /* 4. Mostramos la foto */
+  .alumni-card__image {
+    display: block;
+    width: 70px;
+    height: 70px;
+    border-radius: var(--radius-sm);
+    object-fit: cover;
+    background-color: var(--color-border);
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+  /* 5. Ocultamos la ubicación y el botón */
+  .alumni-card__location,
+  .alumni-card__btn {
+    display: none !important;
+  }
+
+  /* 6. Ajustes de tipografía */
+  .alumni-card__name {
+    font-size: var(--text-sm);
+    margin-bottom: 2px;
+  }
+
+  .alumni-card__role {
+    font-size: var(--text-xs);
+    margin-bottom: 0;
+  }
+
+  /* 7. Estilos de los iconos de la barra inferior */
+  .mobile-nav__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    text-decoration: none;
+  }
+
+  .mobile-nav__item--active {
+    color: var(--color-primary);
+  }
+
+  /* Filtro para pintar el icono SVG de rosa cuando está activo */
+  .mobile-nav__item--active img {
+    filter: invert(21%) sepia(90%) saturate(2327%) hue-rotate(314deg) brightness(96%)
+      contrast(101%);
+  }
+}
+
+/* ==========================================
+   SIGNUP / LOGIN FORMS
+   ========================================== */
+/* --- 1. Cabecera del formulario --- */
+.signup__header,
+.login__header {
+  margin-bottom: var(--space-16);
+  text-align: center;
+}
+
+.signup__title,
+.login__title {
+  font-size: var(--text-3xl);
+  font-weight: var(--weight-bold);
+  color: var(--color-text-main);
+  margin-bottom: var(--space-2);
+}
+
+.signup__subtitle,
+.login__subtitle {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+/* --- 2. Campos del formulario --- */
+.signup-form__field,
+.login-form__field {
+  margin-bottom: var(--space-4);
+}
+
+/* La caja gris del input */
+.signup-form__input-wrapper,
+.login-form__input-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-bg-surface);
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+/* Cuando el usuario hace clic en el input */
+.signup-form__input-wrapper:focus-within,
+.login-form__input-wrapper:focus-within {
+  border-color: var(--color-primary);
+  background-color: var(--color-bg-body);
+}
+
+/* El icono dentro del input */
+.signup-form__icon,
+.login-form__icon {
+  margin-right: var(--space-3);
+  opacity: 0.5;
+  flex-shrink: 0;
+}
+
+/* El input transparente */
+.signup-form__input,
+.login-form__input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  outline: none;
+  font-size: var(--text-sm);
+  color: var(--color-text-main);
+}
+
+.signup-form__input::placeholder,
+.login-form__input::placeholder {
+  color: var(--color-text-muted);
+}
+
+/* Texto de ayuda (Mínimo 8 caracteres) */
+.signup-form__hint {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  margin-top: var(--space-1);
+  margin-left: var(--space-2);
+}
+
+.signup-form__error,
+.login-form__error {
+  font-size: var(--text-xs);
+  color: #c62828;
+  margin-top: var(--space-1);
+  margin-left: var(--space-2);
+}
+
+.login-form__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+  font-size: var(--text-sm);
+}
+
+.login-form__remember {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-text-muted);
+  cursor: pointer;
+}
+
+.login-form__checkbox {
+  width: 1rem;
+  height: 1rem;
+  accent-color: var(--color-primary);
+}
+
+.login-form__forgot-link {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+/* --- 3. Checkbox de Términos --- */
+.signup-form__terms {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-6);
+  font-size: var(--text-sm);
+}
+
+.signup-form__checkbox {
+  width: 1rem;
+  height: 1rem;
+  accent-color: var(--color-primary); /* Pinta el checkbox de rosa */
+}
+
+.signup-form__terms-label a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+/* --- 4. Botón de Enviar --- */
+.signup-form__submit,
+.login-form__submit {
+  width: 100%;
+  margin-bottom: var(--space-6);
+  padding: var(--space-3);
+  font-size: var(--text-base);
+  border-radius: var(--radius-md);
+}
+
+/* --- 5. Separador "o" --- */
+.signup-form__divider,
+.login-form__divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-bottom: var(--space-6);
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+.signup-form__divider::before,
+.signup-form__divider::after,
+.login-form__divider::before,
+.login-form__divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.signup-form__divider-text,
+.login-form__divider-text {
+  padding: 0 var(--space-4);
+}
+
+/* --- 6. Botones Sociales --- */
+.signup-form__social,
+.login-form__social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  width: 100%;
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  margin-bottom: var(--space-3);
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.signup-form__social:hover,
+.login-form__social:hover {
+  opacity: 0.8;
+}
+
+/* Colores específicos de cada red social */
+.signup-form__social--apple,
+.login-form__social--apple {
+  background-color: #fff0f8; /* Rosa muy pálido */
+  color: #d81b60;
+}
+
+.signup-form__social--google,
+.login-form__social--google {
+  background-color: #fdf3f0; /* Rosa muy pálido (según mockup) */
+  color: #c62828;
+}
+
+.signup-form__social--facebook,
+.login-form__social--facebook {
+  background-color: #e3f2fd; /* Azul muy pálido */
+  color: #1565c0;
+}
+
+/* --- 7. Link final (¿Ya te has registrado?) --- */
+.signup-form__login-prompt,
+.login-form__signup-prompt {
+  text-align: center;
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-top: var(--space-12);
+}
+
+.signup-form__link,
+.login-form__link {
+  color: var(--color-primary);
+  font-weight: var(--weight-semibold);
+}
+
+/* ==========================================
+   JOBS COMPONENTS (Base Escritorio y Móvil)
+   ========================================== */
+.jobs__title {
+  font-size: var(--text-3xl);
+  font-weight: var(--weight-bold);
+  color: var(--color-text-main);
+}
+
+.jobs-filters__select {
+  background-color: var(--color-bg-body);
+  color: var(--color-text-main);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-2) var(--space-4);
+  font-family: var(--font-primary);
+  font-size: var(--text-sm);
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.jobs-filters__select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.job-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: var(--space-4);
+  background-color: var(--color-bg-body);
+  padding: var(--space-5);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.job-card__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  min-width: 0;
+}
+
+.job-card__title {
+  font-size: var(--text-base);
+  font-weight: var(--weight-bold);
+  color: var(--color-text-main);
+  margin-bottom: var(--space-1);
+}
+
+.job-card__company {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-1);
+}
+
+.job-card__meta {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-4);
+}
+
+.job-card__actions {
+  margin-top: auto;
+}
+
+.job-card__media {
+  flex-shrink: 0;
+  width: 7.5rem;
+  margin: 0;
+}
+
+.job-card__image {
+  width: 100%;
+  height: 100%;
+  min-height: 6.5rem;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  display: block;
+}
+
+.jobs__empty-state,
+.networking__empty-state {
+  text-align: center;
+  padding: var(--space-12) var(--space-4);
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 48rem) {
+  .job-card {
+    padding: var(--space-4);
+    align-items: center;
+    gap: var(--space-3);
+  }
+
+  .job-card__media {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+
+  .job-card__image {
+    min-height: 100%;
+  }
+
+  .job-card__meta {
+    margin-bottom: var(--space-2);
+  }
+
+  .job-card__btn {
+    padding: var(--space-1) var(--space-4);
+    font-size: var(--text-xs);
+  }
+
+  .mobile-nav__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    text-decoration: none;
+  }
+
+  .mobile-nav__item--active {
+    color: var(--color-primary);
+  }
+
+  .mobile-nav__item--active img {
+    filter: invert(21%) sepia(90%) saturate(2327%) hue-rotate(314deg) brightness(96%)
+      contrast(101%);
+  }
+}

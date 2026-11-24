@@ -1,0 +1,218 @@
+[
+  {
+    "id": "job-01",
+    "title": "Frontend Developer",
+    "company": "Cibernarium",
+    "location": "Barcelona",
+    "contractType": "Full-time",
+    "stack": "Front-end",
+    "applyUrl": "#"
+  },
+  {
+    "id": "job-02",
+    "title": "Backend Engineer",
+    "company": "Miscosoft",
+    "location": "Remote",
+    "contractType": "Full-time",
+    "stack": "Back-end",
+    "applyUrl": "#"
+  },
+  {
+    "id": "job-03",
+    "title": "Fullstack Developer",
+    "company": "Mooglie",
+    "location": "Madrid",
+    "contractType": "Contract",
+    "stack": "Full-stack",
+    "applyUrl": "#"
+  },
+  {
+    "id": "job-04",
+    "title": "iOS Mobile Developer",
+    "company": "Papple",
+    "location": "Barcelona",
+    "contractType": "Full-time",
+    "stack": "Mobile",
+    "applyUrl": "#"
+  },
+  {
+    "id": "job-05",
+    "title": "DevOps Engineer",
+    "company": "Miscosoft",
+    "location": "Remote",
+    "contractType": "Part-time",
+    "stack": "DevOps",
+    "applyUrl": "#"
+  },
+  {
+    "id": "job-06",
+    "title": "React Developer",
+    "company": "Cibernarium",
+    "location": "Valencia",
+    "contractType": "Full-time",
+    "stack": "Front-end",
+    "applyUrl": "#"
+  },
+  {
+    "id": "job-07",
+    "title": "Node.js Backend Developer",
+    "company": "Mooglie",
+    "location": "Barcelona",
+    "contractType": "Contract",
+    "stack": "Back-end",
+    "applyUrl": "#"
+  },
+  {
+    "id": "job-08",
+    "title": "Frontend Engineer (UX)",
+    "company": "Papple",
+    "location": "Madrid",
+    "contractType": "Part-time",
+    "stack": "Front-end",
+    "applyUrl": "#"
+  },
+  {
+    "id": "job-09",
+    "title": "Flutter Developer",
+    "company": "Cibernarium",
+    "location": "Remote",
+    "contractType": "Full-time",
+    "stack": "Mobile",
+    "applyUrl": "#"
+  },
+  {
+    "id": "job-10",
+    "title": "Fullstack Developer",
+    "company": "Papple",
+    "location": "Barcelona",
+    "contractType": "Full-time",
+    "stack": "Full-stack",
+    "applyUrl": "#"
+  },
+  {
+    "id": "job-11",
+    "title": "QA Automation Tester",
+    "company": "Miscosoft",
+    "location": "Madrid",
+    "contractType": "Full-time",
+    "stack": "Tester",
+    "applyUrl": "#"
+  },
+  {
+    "id": "job-12",
+    "title": "DevOps Engineer",
+    "company": "Mooglie",
+    "location": "Barcelona",
+    "contractType": "Contract",
+    "stack": "DevOps",
+    "applyUrl": "#"
+  },
+  {
+    "id": "job-13",
+    "title": "React Developer",
+    "company": "Papple",
+    "location": "Remote",
+    "contractType": "Part-time",
+    "stack": "Front-end",
+    "applyUrl": "#"
+  },
+  {
+    "id": "job-14",
+    "title": "Backend Engineer",
+    "company": "Cibernarium",
+    "location": "Valencia",
+    "contractType": "Full-time",
+    "stack": "Back-end",
+    "applyUrl": "#"
+  },
+  {
+    "id": "job-15",
+    "title": "iOS Mobile Developer",
+    "company": "Mooglie",
+    "location": "Madrid",
+    "contractType": "Full-time",
+    "stack": "Mobile",
+    "applyUrl": "#"
+  },
+  {
+    "id": "job-16",
+    "title": "Frontend Developer",
+    "company": "Miscosoft",
+    "location": "Valencia",
+    "contractType": "Contract",
+    "stack": "Front-end",
+    "applyUrl": "#"
+  },
+  {
+    "id": "job-17",
+    "title": "Fullstack Developer",
+    "company": "Cibernarium",
+    "location": "Remote",
+    "contractType": "Part-time",
+    "stack": "Full-stack",
+    "applyUrl": "#"
+  },
+  {
+    "id": "job-18",
+    "title": "Node.js Backend Developer",
+    "company": "Papple",
+    "location": "Remote",
+    "contractType": "Full-time",
+    "stack": "Back-end",
+    "applyUrl": "#"
+  },
+  {
+    "id": "job-19",
+    "title": "Flutter Developer",
+    "company": "Mooglie",
+    "location": "Barcelona",
+    "contractType": "Part-time",
+    "stack": "Mobile",
+    "applyUrl": "#"
+  },
+  {
+    "id": "job-20",
+    "title": "Frontend Engineer (UX)",
+    "company": "Cibernarium",
+    "location": "Barcelona",
+    "contractType": "Full-time",
+    "stack": "Front-end",
+    "applyUrl": "#"
+  },
+  {
+    "id": "job-21",
+    "title": "QA Automation Tester",
+    "company": "Mooglie",
+    "location": "Remote",
+    "contractType": "Contract",
+    "stack": "Tester",
+    "applyUrl": "#"
+  },
+  {
+    "id": "job-22",
+    "title": "DevOps Engineer",
+    "company": "Papple",
+    "location": "Valencia",
+    "contractType": "Full-time",
+    "stack": "DevOps",
+    "applyUrl": "#"
+  },
+  {
+    "id": "job-23",
+    "title": "Backend Engineer",
+    "company": "Mooglie",
+    "location": "Barcelona",
+    "contractType": "Part-time",
+    "stack": "Back-end",
+    "applyUrl": "#"
+  },
+  {
+    "id": "job-24",
+    "title": "Fullstack Developer",
+    "company": "Miscosoft",
+    "location": "Barcelona",
+    "contractType": "Full-time",
+    "stack": "Full-stack",
+    "applyUrl": "#"
+  }
+]

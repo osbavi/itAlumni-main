@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ofertas de Empleo | ITAlumni</title>
+    <meta
+      name="description"
+      content="Explora oportunidades laborales adaptadas a perfiles tecnológicos junior y conecta con empresas del sector." />
+
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#DF007F" />
+
+    <link
+      rel="icon"
+      href="../src/assets/icons/favicon-color.svg"
+      type="image/svg+xml" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;1,400&family=Poppins:wght@500;600;700&display=swap"
+      rel="stylesheet" />
+
+    <!-- Hojas de estilo en orden de cascada (Mobile First) -->
+    <link rel="stylesheet" href="../src/styles/tokens.css" />
+    <link rel="stylesheet" href="../src/styles/base.css" />
+    <link rel="stylesheet" href="../src/styles/layout.css" />
+    <link rel="stylesheet" href="../src/styles/components.css" />
+  </head>
+
+  <body class="jobs-page">
+    <!-- criterios de accessibilidad WCAG 2.2 navegación teclado -->
+    <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+    <!-- HEADER PARA USUARIOS LOGUEADOS -->
+    <header class="site-header site-header--authenticated">
+      <!-- Botón Volver (Solo visible en móvil) -->
+      <a
+        href="../index.html"
+        class="site-header__back-btn"
+        aria-label="Volver al inicio">
+        &#8592;
+      </a>
+
+      <!-- Logo (Se oculta en móvil, se ve en escritorio) -->
+      <a
+        class="site-header__brand"
+        href="../index.html"
+        aria-label="IT Alumni - Inicio">
+        <img
+          class="site-header__logo-mark"
+          src="../src/assets/icons/x-logo-icon-color.svg"
+          alt=""
+          aria-hidden="true"
+          width="24"
+          height="24" />
+        <img
+          class="site-header__logo-text"
+          src="../src/assets/icons/logo-icon-color.svg"
+          alt=""
+          aria-hidden="true"
+          width="112"
+          height="24" />
+      </a>
+
+      <!-- Título para móvil (Oculto en escritorio) -->
+      <span class="site-header__title-mobile">Ofertas de empleo</span>
+
+      <nav class="site-nav" aria-label="Navegación principal">
+        <ul class="site-nav__list">
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="../index.html">Inicio</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="./networking.html">Comunidad</a>
+          </li>
+          <li class="site-nav__item">
+            <a
+              class="site-nav__link site-nav__link--active"
+              href="./jobs.html"
+              aria-current="page"
+              >Ofertas de empleo
+            </a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="./events.html">Eventos</a>
+          </li>
+        </ul>
+
+        <div class="site-header__user-actions">
+          <button
+            type="button"
+            class="site-header__icon-btn hide-on-mobile"
+            aria-label="Buscar">
+            <img
+              src="../src/assets/icons/search-icon.svg"
+              alt=""
+              aria-hidden="true"
+              width="24"
+              height="24" />
+          </button>
+
+          <button
+            type="button"
+            class="site-header__icon-btn hide-on-mobile"
+            aria-label="Notificaciones">
+            <img
+              src="../src/assets/icons/bell-icon.svg"
+              alt=""
+              aria-hidden="true"
+              width="24"
+              height="24" />
+          </button>
+
+          <button
+            type="button"
+            class="site-header__icon-btn hide-on-mobile"
+            aria-label="Ajustes de cuenta">
+            <img
+              src="../src/assets/icons/settings-icon.svg"
+              alt=""
+              aria-hidden="true"
+              width="24"
+              height="24" />
+          </button>
+
+          <button
+            type="button"
+            class="site-header__icon-btn show-on-mobile"
+            aria-label="Estadísticas">
+            <img
+              src="../src/assets/icons/barchart-icon.svg"
+              alt=""
+              aria-hidden="true"
+              width="24"
+              height="24" />
+          </button>
+
+          <a
+            href="./profile.html"
+            class="site-header__avatar-link"
+            aria-label="Mi perfil">
+            <img
+              class="site-header__avatar"
+              src="../src/img/00_img_jobPortalSection.webp"
+              alt="Foto de perfil del usuario"
+              width="32"
+              height="32"
+              loading="lazy" />
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main-content" class="site-main">
+      <section class="jobs" aria-labelledby="jobs-title">
+        <!-- TÍTULO ACCESIBLE (Oculto visualmente si el diseño no lo muestra, pero necesario para lectores de pantalla) -->
+        <h1 id="jobs-title" class="visually-hidden">Bolsa de trabajo</h1>
+
+        <!-- BARRA SUPERIOR: BÚSQUEDA Y FILTROS -->
+        <form
+          class="jobs-filters"
+          id="jobs-filters-form"
+          role="search"
+          aria-label="Buscar ofertas de empleo">
+          <div class="jobs-filters__group jobs-filters__group--search">
+            <label for="search-jobs" class="jobs-filters__label visually-hidden">
+              Buscar ofertas
+            </label>
+            <div class="search-bar__wrapper">
+              <img
+                class="search-bar__icon"
+                src="../src/assets/icons/search-icon.svg"
+                alt=""
+                aria-hidden="true"
+                width="20"
+                height="20" />
+              <input
+                type="search"
+                id="search-jobs"
+                name="q"
+                class="search-bar__input"
+                placeholder="Buscar ofertas..." />
+            </div>
+          </div>
+
+          <div class="jobs-filters__selects">
+            <div class="jobs-filters__group">
+              <label for="filter-stack" class="jobs-filters__label visually-hidden">
+                Stack tecnológico
+              </label>
+              <select id="filter-stack" name="stack" class="jobs-filters__select">
+                <option value="">Todos los stacks</option>
+                <option value="Front-end">Front-end</option>
+                <option value="Back-end">Back-end</option>
+                <option value="Full-stack">Full-stack</option>
+                <option value="Mobile">Mobile</option>
+                <option value="DevOps">DevOps</option>
+                <option value="Tester">Tester</option>
+              </select>
+            </div>
+
+            <div class="jobs-filters__group">
+              <label
+                for="filter-contract"
+                class="jobs-filters__label visually-hidden">
+                Tipo de contrato
+              </label>
+              <select
+                id="filter-contract"
+                name="contractType"
+                class="jobs-filters__select">
+                <option value="">Cualquier contrato</option>
+                <option value="Full-time">Jornada completa</option>
+                <option value="Part-time">Media jornada</option>
+                <option value="Contract">Contrato</option>
+              </select>
+            </div>
+
+            <div class="jobs-filters__group">
+              <label
+                for="filter-location"
+                class="jobs-filters__label visually-hidden">
+                Ubicación
+              </label>
+              <select
+                id="filter-location"
+                name="location"
+                class="jobs-filters__select">
+                <option value="">Cualquier ubicación</option>
+                <option value="Barcelona">Barcelona</option>
+                <option value="Madrid">Madrid</option>
+                <option value="Valencia">Valencia</option>
+                <option value="Remote">Remoto</option>
+              </select>
+            </div>
+          </div>
+        </form>
+
+        <!-- GRID DE OFERTAS -->
+        <h2 class="visually-hidden">Listado de ofertas disponibles</h2>
+        <div class="jobs__grid" id="jobs-results">
+          <!-- Oferta 1 -->
+          <article class="job-card">
+            <div class="job-card__body">
+              <div class="job-card__content">
+                <h3 class="job-card__title">Desarrollador/a Frontend</h3>
+                <p class="job-card__company">Cibernarium · Barcelona</p>
+                <p class="job-card__meta">Jornada completa · Front-end</p>
+              </div>
+              <div class="job-card__actions">
+                <a href="#" class="btn btn--outline job-card__btn">Aplicar ahora</a>
+              </div>
+            </div>
+            <figure class="job-card__media">
+              <img
+                class="job-card__image"
+                src="../src/img/01_img_jobPortalSection.webp"
+                alt="Imagen de la oferta de Desarrollador Frontend"
+                width="300"
+                height="200"
+                loading="lazy" />
+            </figure>
+          </article>
+
+          <!-- Oferta 2 -->
+          <article class="job-card">
+            <div class="job-card__body">
+              <div class="job-card__content">
+                <h3 class="job-card__title">Ingeniero/a Backend</h3>
+                <p class="job-card__company">Miscosoft · Remoto</p>
+                <p class="job-card__meta">Jornada completa · Back-end</p>
+              </div>
+              <div class="job-card__actions">
+                <a href="#" class="btn btn--outline job-card__btn">Ver detalles</a>
+              </div>
+            </div>
+            <figure class="job-card__media">
+              <img
+                class="job-card__image"
+                src="../src/img/02_img_jobPortalSection.webp"
+                alt="Imagen de la oferta de Ingeniero Backend"
+                width="300"
+                height="200"
+                loading="lazy" />
+            </figure>
+          </article>
+
+          <!-- Oferta 3 -->
+          <article class="job-card">
+            <div class="job-card__body">
+              <div class="job-card__content">
+                <h3 class="job-card__title">Desarrollador/a Fullstack</h3>
+                <p class="job-card__company">Mooglie · Madrid</p>
+                <p class="job-card__meta">Contrato · Full-stack</p>
+              </div>
+              <div class="job-card__actions">
+                <a href="#" class="btn btn--outline job-card__btn">Ver detalles</a>
+              </div>
+            </div>
+            <figure class="job-card__media">
+              <img
+                class="job-card__image"
+                src="../src/img/03_img_jobPortalSection.webp"
+                alt="Imagen de la oferta de Desarrollador Fullstack"
+                width="300"
+                height="200"
+                loading="lazy" />
+            </figure>
+          </article>
+
+          <!-- Oferta 4 -->
+          <article class="job-card">
+            <div class="job-card__body">
+              <div class="job-card__content">
+                <h3 class="job-card__title">Desarrollador/a Móvil iOS</h3>
+                <p class="job-card__company">Papple · Barcelona</p>
+                <p class="job-card__meta">Jornada completa · Mobile</p>
+              </div>
+              <div class="job-card__actions">
+                <a href="#" class="btn btn--outline job-card__btn">Aplicar ahora</a>
+              </div>
+            </div>
+            <figure class="job-card__media">
+              <img
+                class="job-card__image"
+                src="../src/img/04_img_jobPortalSection.webp"
+                alt="Imagen de la oferta de Desarrollador Móvil iOS"
+                width="300"
+                height="200"
+                loading="lazy" />
+            </figure>
+          </article>
+
+          <!-- Oferta 5 -->
+          <article class="job-card">
+            <div class="job-card__body">
+              <div class="job-card__content">
+                <h3 class="job-card__title">Ingeniero/a DevOps</h3>
+                <p class="job-card__company">iscosoft · Remoto</p>
+                <p class="job-card__meta">Media jornada · DevOps</p>
+              </div>
+              <div class="job-card__actions">
+                <a href="#" class="btn btn--outline job-card__btn">Ver detalles</a>
+              </div>
+            </div>
+            <figure class="job-card__media">
+              <img
+                class="job-card__image"
+                src="../src/img/05_img_jobPortalSection.webp"
+                alt="Imagen de la oferta de Ingeniero DevOps"
+                width="300"
+                height="200"
+                loading="lazy" />
+            </figure>
+          </article>
+
+          <!-- Oferta 6 -->
+          <article class="job-card">
+            <div class="job-card__body">
+              <div class="job-card__content">
+                <h3 class="job-card__title">Desarrollador/a React</h3>
+                <p class="job-card__company">Cibernarium · Valencia</p>
+                <p class="job-card__meta">PJornada completa · Front-end</p>
+              </div>
+              <div class="job-card__actions">
+                <a href="#" class="btn btn--outline job-card__btn">Aplicar ahora</a>
+              </div>
+            </div>
+            <figure class="job-card__media">
+              <img
+                class="job-card__image"
+                src="../src/img/06_img_jobPortalSection.webp"
+                alt="Imagen de la oferta de Desarrollador React"
+                width="300"
+                height="200"
+                loading="lazy" />
+            </figure>
+          </article>
+        </div>
+
+        <!-- Estado vacío para cuando el filtro en JS no devuelva resultados -->
+        <div class="jobs__empty-state" id="jobs-empty-state" hidden>
+          <p>No se han encontrado ofertas con esos criterios de búsqueda.</p>
+          <button type="button" class="btn btn--primary" id="clear-jobs-filters-btn">
+            Limpiar filtros
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- BARRA DE NAVEGACIÓN INFERIOR (Solo visible en móvil) -->
+    <nav class="mobile-nav" aria-label="Navegación móvil">
+      <a href="../index.html" class="mobile-nav__item">
+        <img
+          src="../src/assets/icons/home-icon.svg"
+          alt=""
+          aria-hidden="true"
+          width="24"
+          height="24" />
+        <span>Inicio</span>
+      </a>
+      <a href="./networking.html" class="mobile-nav__item">
+        <img
+          src="../src/assets/icons/Network-icon.svg"
+          alt=""
+          aria-hidden="true"
+          width="24"
+          height="24" />
+        <span>Comunidad</span>
+      </a>
+      <a
+        href="./jobs.html"
+        class="mobile-nav__item mobile-nav__item--active"
+        aria-current="page">
+        <img
+          src="../src/assets/icons/jobportal-icon.svg"
+          alt=""
+          aria-hidden="true"
+          width="24"
+          height="24" />
+        <span>Ofertas de empleo</span>
+      </a>
+      <a href="./events.html" class="mobile-nav__item">
+        <img
+          src="../src/assets/icons/events-icon.svg"
+          alt=""
+          aria-hidden="true"
+          width="24"
+          height="24" />
+        <span>Eventos</span>
+      </a>
+      <a href="./profile.html" class="mobile-nav__item">
+        <img
+          src="../src/assets/icons/user-icon.svg"
+          alt=""
+          aria-hidden="true"
+          width="24"
+          height="24" />
+        <span>Perfil</span>
+      </a>
+    </nav>
+  </body>
+</html>

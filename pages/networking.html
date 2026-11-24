@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comunidad | ITAlumni</title>
+    <meta
+      name="description"
+      content="Explora perfiles de exalumnos, conecta con profesionales y amplía tu red." />
+
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#DF007F" />
+
+    <link
+      rel="icon"
+      href="../src/assets/icons/favicon-color.svg"
+      type="image/svg+xml" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;1,400&family=Poppins:wght@500;600;700&display=swap"
+      rel="stylesheet" />
+
+    <!-- Hojas de estilo en orden de cascada (Mobile First) -->
+    <link rel="stylesheet" href="../src/styles/tokens.css" />
+    <link rel="stylesheet" href="../src/styles/base.css" />
+    <link rel="stylesheet" href="../src/styles/layout.css" />
+    <link rel="stylesheet" href="../src/styles/components.css" />
+  </head>
+
+  <body class="networking-page">
+    <!-- criterios de accessibilidad WCAG 2.2 navegación teclado -->
+    <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+    <!-- HEADER PARA USUARIOS LOGUEADOS -->
+    <header class="site-header site-header--authenticated">
+      <!-- Botón Volver (Solo visible en móvil) -->
+      <a
+        href="../index.html"
+        class="site-header__back-btn"
+        aria-label="Volver al inicio">
+        &#8592;
+      </a>
+
+      <!-- Logo (Se oculta en móvil, se ve en escritorio) -->
+      <a
+        class="site-header__brand"
+        href="../index.html"
+        aria-label="IT Alumni - Inicio">
+        <img
+          class="site-header__logo-mark"
+          src="../src/assets/icons/x-logo-icon-color.svg"
+          alt=""
+          aria-hidden="true"
+          width="24"
+          height="24" />
+        <img
+          class="site-header__logo-text"
+          src="../src/assets/icons/logo-icon-color.svg"
+          alt=""
+          aria-hidden="true"
+          width="112"
+          height="24" />
+      </a>
+
+      <!-- 3. Título para móvil (Oculto en escritorio) -->
+      <span class="site-header__title-mobile">Comunidad</span>
+
+      <nav class="site-nav" aria-label="Navegación principal">
+        <!-- Enlaces del menú (Ocultos en móvil) -->
+        <ul class="site-nav__list">
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="../index.html">Inicio</a>
+          </li>
+          <li class="site-nav__item">
+            <a
+              class="site-nav__link site-nav__link--active"
+              href="./networking.html"
+              aria-current="page"
+              >Comunidad
+            </a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="./jobs.html">Ofertas de empleo</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="./events.html">Eventos</a>
+          </li>
+        </ul>
+
+        <!-- Acciones de usuario autenticado -->
+        <div class="site-header__user-actions">
+          <!-- Iconos que SOLO se ven en Escritorio (ocultos móvil) -->
+          <!-- Botón de búsqueda (lupa) -->
+          <button
+            type="button"
+            class="site-header__icon-btn hide-on-mobile"
+            aria-label="Buscar">
+            <img
+              src="../src/assets/icons/search-icon.svg"
+              alt=""
+              aria-hidden="true"
+              width="24"
+              height="24" />
+          </button>
+
+          <!-- Notificaciones (campanita) -->
+          <button
+            type="button"
+            class="site-header__icon-btn hide-on-mobile"
+            aria-label="Notificaciones">
+            <img
+              src="../src/assets/icons/bell-icon.svg"
+              alt=""
+              aria-hidden="true"
+              width="24"
+              height="24" />
+          </button>
+
+          <!-- Ajustes (rueda dentada) -->
+          <button
+            type="button"
+            class="site-header__icon-btn hide-on-mobile"
+            aria-label="Ajustes de cuenta">
+            <img
+              src="../src/assets/icons/settings-icon.svg"
+              alt=""
+              aria-hidden="true"
+              width="24"
+              height="24" />
+          </button>
+
+          <!-- Estadísticas (SOLO se ve en Móvil) -->
+          <button
+            type="button"
+            class="site-header__icon-btn show-on-mobile"
+            aria-label="Estadísticas">
+            <img
+              src="../src/assets/icons/barchart-icon.svg"
+              alt=""
+              aria-hidden="true"
+              width="24"
+              height="24" />
+          </button>
+
+          <!-- Avatar del usuario -->
+          <a
+            href="./profile.html"
+            class="site-header__avatar-link"
+            aria-label="Mi perfil">
+            <img
+              class="site-header__avatar"
+              src="../src/img/01_imgNetworkingSection.webp"
+              alt="Foto de perfil del usuario"
+              width="32"
+              height="32"
+              loading="lazy" />
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main-content" class="site-main">
+      <section class="networking" aria-labelledby="networking-title">
+        <!-- TÍTULO ACCESIBLE (Oculto visualmente si el diseño no lo muestra, pero necesario para lectores de pantalla) -->
+        <h1 id="networking-title" class="visually-hidden">
+          Red de Contactos (Networking)
+        </h1>
+
+        <!-- BARRA SUPERIOR: BÚSQUEDA Y FILTROS DE ORDENACIÓN -->
+        <div class="networking__top-bar">
+          <!-- Buscador -->
+          <form class="search-bar" role="search" aria-label="Buscar exalumnos">
+            <label for="search-alumni" class="visually-hidden"
+              >Buscar por nombre, stack, skill o ciudad</label
+            >
+            <div class="search-bar__wrapper">
+              <img
+                class="search-bar__icon"
+                src="../src/assets/icons/search-icon.svg"
+                alt=""
+                aria-hidden="true"
+                width="20"
+                height="20" />
+              <input
+                type="search"
+                id="search-alumni"
+                name="q"
+                class="search-bar__input"
+                placeholder="Buscar por nombre, stack, skill o ciudad..." />
+            </div>
+          </form>
+
+          <!-- Filtros / Ordenación (Desktop) -->
+          <div class="networking__filters role="group" 
+          aria-label="Filtrar exalumnos">
+            <span class="networking__filters-label">Filtros:</span>
+            <button
+              type="button"
+              class="networking__filter-btn networking__filter-btn--active"
+              data-filter="all"
+              aria-pressed="true">
+              Todos
+            </button>
+            <button
+              type="button"
+              class="networking__filter-btn"
+              data-filter="open-to-work"
+              aria-pressed="false">
+              Open to work
+            </button>
+            <button
+              type="button"
+              class="networking__filter-btn"
+              data-filter="available"
+              aria-pressed="false">
+              Disponibles
+            </button>
+          </div>
+        </div>
+
+        <!-- BLOQUE 1: PERFILES DESTACADOS (Grid de 4 columnas) -->
+        <section class="networking__section" aria-labelledby="featured-title">
+          <h2 id="featured-title" class="visually-hidden">Perfiles de exalumnos</h2>
+
+          <div class="alumni-grid" id="alumni-results">
+            <!-- Tarjeta de respaldo mientras carga JS -->
+            <article class="alumni-card">
+              <div class="alumni-card__info">
+                <h3 class="alumni-card__name">Laura Martínez</h3>
+                <p class="alumni-card__class">Junior · Open to work</p>
+                <p class="alumni-card__role">Front-end · React, TypeScript, Tailwind</p>
+                <p class="alumni-card__location">Barcelona · Disponible</p>
+              </div>
+              <img
+                class="alumni-card__image"
+                src="https://i.pravatar.cc/150?img=49"
+                alt="Foto de Laura Martínez"
+                width="80"
+                height="80"
+                loading="lazy" />
+              <button
+                type="button"
+                class="btn btn--primary alumni-card__btn alumni-card__btn--message">
+                Conectar
+              </button>
+            </article>
+          </div>
+
+          <!-- Estado vacío para cuando el filtro en JS no devuelva resultados -->
+          <div class="networking__empty-state" id="alumni-empty-state" hidden>
+            <p>No se han encontrado exalumnos con esos criterios de búsqueda.</p>
+          </div>
+        </section>
+
+        <!-- BLOQUE 2 Y 3: ACTIVIDAD Y SUGERENCIAS -->
+        <div class="networking__columns">
+          <!-- Columna Izquierda: Recent Activity -->
+          <section class="recent-activity" aria-labelledby="activity-title">
+            <h2 id="activity-title" class="recent-activity__title">
+              Actividad reciente
+            </h2>
+            <ul class="recent-activity__list">
+              <li class="recent-activity__item">
+                Laura Martínez empezó a seguir a Carlos Navarro
+              </li>
+              <li class="recent-activity__item">
+                Aina Soler y Pol Vidal conectaron
+              </li>
+              <li class="recent-activity__item">
+                David Fernández compartió recursos sobre Docker y Kubernetes
+              </li>
+              <li class="recent-activity__item">
+                Elena Castro actualizó su perfil a Open to work
+              </li>
+            </ul>
+          </section>
+
+          <!-- Columna Derecha: Suggestions for You -->
+          <section class="suggestions" aria-labelledby="suggestions-title">
+            <h2 id="suggestions-title" class="suggestions__title">
+              Sugerencias para ti
+            </h2>
+
+            <div class="suggestions__list">
+              <!-- Persona 1 -->
+              <article class="alumni-row">
+                <div class="alumni-row__info">
+                  <h3 class="alumni-row__name">Laura Martínez</h3>
+                  <p class="alumni-row__role">Front-end · Junior</p>
+                  <p class="alumni-row__location">Barcelona</p>
+                </div>
+                <button type="button" class="btn btn--primary alumni-row__btn">
+                  Conectar
+                </button>
+              </article>
+
+              <!-- Persona 2 -->
+              <article class="alumni-row">
+                <div class="alumni-row__info">
+                  <h3 class="alumni-row__name">Aina Soler</h3>
+                  <p class="alumni-row__role">Full-stack · Junior</p>
+                  <p class="alumni-row__location">Barcelona</p>
+                </div>
+                <button type="button" class="btn btn--primary alumni-row__btn">
+                  Conectar
+                </button>
+              </article>
+
+              <!-- Persona 3 -->
+              <article class="alumni-row">
+                <div class="alumni-row__info">
+                  <h3 class="alumni-row__name">Elena Castro</h3>
+                  <p class="alumni-row__role">Front-end · Mid-level</p>
+                  <p class="alumni-row__location">Madrid</p>
+                </div>
+                <button type="button" class="btn btn--primary alumni-row__btn">
+                  Conectar
+                </button>
+              </article>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <!-- BARRA DE NAVEGACIÓN INFERIOR (Solo visible en móvil) -->
+    <nav class="mobile-nav" aria-label="Navegación móvil">
+      <a href="../index.html" class="mobile-nav__item">
+        <img
+          src="../src/assets/icons/home-icon.svg"
+          alt=""
+          aria-hidden="true"
+          width="24"
+          height="24" />
+        <span>Inicio</span>
+      </a>
+      <a href="./networking.html" class="mobile-nav__item mobile-nav__item--active">
+        <img
+          src="../src/assets/icons/Network-icon.svg"
+          alt=""
+          aria-hidden="true"
+          width="24"
+          height="24" />
+        <span>Comunidad</span>
+      </a>
+      <a href="./jobs.html" class="mobile-nav__item">
+        <img
+          src="../src/assets/icons/jobportal-icon.svg"
+          alt=""
+          aria-hidden="true"
+          width="24"
+          height="24" />
+        <span>Ofertas de empleo</span>
+      </a>
+      <a href="./events.html" class="mobile-nav__item">
+        <img
+          src="../src/assets/icons/events-icon.svg"
+          alt=""
+          aria-hidden="true"
+          width="24"
+          height="24" />
+        <span>Eventos</span>
+      </a>
+      <a href="./profile.html" class="mobile-nav__item">
+        <img
+          src="../src/assets/icons/user-icon.svg"
+          alt=""
+          aria-hidden="true"
+          width="24"
+          height="24" />
+        <span>Perfil</span>
+      </a>
+    </nav>
+    <script type="module" src="../src/scripts/networking.js"></script>
+  </body>
+</html>
